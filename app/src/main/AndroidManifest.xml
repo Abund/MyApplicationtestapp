@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CaloriesAddPage"></activity>
+        <activity android:name=".MedicationAddPage"></activity>
+        <activity android:name=".MedicationDashBoard" />
+        <activity android:name=".CaloriesAddPage" />
         <activity android:name=".BloodSugarAddPage" />
         <activity android:name=".GoalActivity" />
         <activity android:name=".CaloriesActivity" />
