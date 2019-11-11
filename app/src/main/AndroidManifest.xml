@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplicationtestapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CaloriesAddPage"></activity>
+        <activity android:name=".BloodSugarAddPage" />
+        <activity android:name=".GoalActivity" />
+        <activity android:name=".CaloriesActivity" />
+        <activity android:name=".BloodSugarActivity" />
+        <activity android:name=".bloodpressureaddpage" />
+        <activity android:name=".BloodpressureActivity" />
+        <activity
+            android:name=".homescreen"
+            android:label="@string/title_activity_homescreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".registrationpage" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
