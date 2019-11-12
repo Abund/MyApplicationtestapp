@@ -21,12 +21,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class homescreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView bloodp,bloods,cal,goal;
+    Button medi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class homescreen extends AppCompatActivity
         bloodp = (TextView) findViewById(R.id.bloodPressureT);
         bloods = (TextView) findViewById(R.id.bloodSugarT);
         cal = (TextView) findViewById(R.id.calories);
+        goal = (TextView) findViewById(R.id.goals);
+        medi=(Button) findViewById(R.id.medibutton);
 
         bloodp.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -78,13 +82,21 @@ public class homescreen extends AppCompatActivity
             }
         });
 
-//        goal.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//                Intent at = new Intent(homescreen.this, GoalActivity.class);
-//                startActivity(at);
-//            }
-//        });
+        goal.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent at = new Intent(homescreen.this, GoalActivity.class);
+                startActivity(at);
+            }
+        });
+
+        medi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent at = new Intent(homescreen.this, MedicationDashBoard.class);
+                startActivity(at);
+            }
+        });
 
     }
 
