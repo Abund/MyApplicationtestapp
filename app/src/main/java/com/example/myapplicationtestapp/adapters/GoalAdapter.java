@@ -10,15 +10,15 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplicationtestapp.R;
-import com.example.myapplicationtestapp.model.Medication;
+import com.example.myapplicationtestapp.model.Goal;
 
 import java.util.ArrayList;
 
-public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.ViewHolder> {
+public class GoalAdapter extends RecyclerView.Adapter<GoalAdapter.ViewHolder> {
 
 
     private ArrayList<String> mData;
-    private ArrayList<Medication> Data;
+    private ArrayList<Goal> Data;
     private Context ct1;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -41,19 +41,19 @@ public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.Vi
             card = (CardView) itemView.findViewById(R.id.lineChart);
         }
     }
-    public MedicationAdapter(ArrayList<String> Data1){
+    public GoalAdapter(ArrayList<String> Data1){
 
         this.mData=Data1;
     }
 
-    public MedicationAdapter(ArrayList<Medication> Data, Context ct)
+    public GoalAdapter(ArrayList<Goal> Data, Context ct)
     {
         this.Data=Data;
         this.ct1 =ct;
     }
 
     @Override
-    public MedicationAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public GoalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.bloodcard,parent,false);
         ViewHolder vh = new ViewHolder(v);
@@ -61,7 +61,7 @@ public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(final MedicationAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final GoalAdapter.ViewHolder holder, final int position) {
 //        holder.date.setText(Data.get(position).getDate()+"");
 //        holder.time.setText(Data.get(position).getTime()+"");
 //        holder.arm.setText(Data.get(position).getMeasuredArm()+"");
@@ -74,5 +74,4 @@ public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.Vi
     public int getItemCount() {
         return Data.size();
     }
-
 }
