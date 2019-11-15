@@ -61,8 +61,8 @@ public class BloodSugarActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
-                    BloodSugar bloodPressure = dataSnapshot1.getValue(BloodSugar.class);
-                    data.add(bloodPressure);
+                    BloodSugar bloodSugar = dataSnapshot1.getValue(BloodSugar.class);
+                    data.add(bloodSugar);
                 }
                 bloodSugarAdapter = new BloodSugarAdapter(data,BloodSugarActivity.this);
                 mRecycler.setAdapter(bloodSugarAdapter);
