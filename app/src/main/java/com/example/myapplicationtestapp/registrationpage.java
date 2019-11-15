@@ -6,15 +6,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.myapplicationtestapp.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class registrationpage extends AppCompatActivity {
 
@@ -34,6 +41,8 @@ public class registrationpage extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("Healthcare");
 
         if(firebaseAuth.getCurrentUser()!=null){
             Intent at = new Intent(registrationpage.this, homescreen.class);
@@ -63,6 +72,14 @@ public class registrationpage extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+
+                            User user = new User();
+                            user.setEmail(email.getText().toString().trim());
+                            user.setFirstName(firstName.getText().toString().trim());
+                            user.setLastName(lastName.getText().toString().trim());
+
+                            myRef.setValue(user);
+                            //myRef.child("Healthcare")
                             Toast.makeText(registrationpage.this,"Registration successful",Toast.LENGTH_SHORT).show();
                             Intent at = new Intent(registrationpage.this, homescreen.class);
                             startActivity(at);
@@ -72,6 +89,17 @@ public class registrationpage extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override public void onDataChange(DataSnapshot dataSnapshot) {
+                //String value = dataSnapshot.getValue(String.class);
+                // viewText.setText(value);
+            }
+            @Override public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Ch3", "Failed to read value.", error.toException());
             }
         });
     }

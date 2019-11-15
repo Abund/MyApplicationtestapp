@@ -12,7 +12,7 @@
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="10dp"
@@ -21,7 +21,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/lastName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -29,18 +29,16 @@
         android:id="@+id/lastName"
         android:layout_width="235dp"
         android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
         android:ems="10"
         android:hint="Lastname"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
@@ -59,7 +57,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
@@ -88,10 +86,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="10dp"
         android:background="@color/correctgreen"
         android:text="Sign Up"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -102,25 +99,27 @@
     <Button
         android:id="@+id/button5"
         android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_height="30dp"
         android:layout_marginStart="96dp"
         android:layout_marginLeft="96dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="83dp"
         android:layout_marginRight="83dp"
-        android:layout_marginBottom="19dp"
         android:background="@color/correctgreen"
         android:drawableLeft="@drawable/google_logo"
         android:text="Continue with Google"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="235dp"
-        android:layout_height="48dp"
+        android:layout_height="30dp"
         android:layout_marginStart="93dp"
         android:layout_marginLeft="93dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="83dp"
         android:layout_marginRight="83dp"
         android:layout_marginBottom="77dp"
@@ -129,21 +128,19 @@
         android:text="Continue with Facebook"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="203dp"
+        android:layout_marginLeft="203dp"
         android:text="Or"
         app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/signup" />
 
     <TextView
         android:id="@+id/textView2"
