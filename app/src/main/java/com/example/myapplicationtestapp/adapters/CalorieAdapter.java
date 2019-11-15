@@ -1,20 +1,23 @@
 package com.example.myapplicationtestapp.adapters;
 
-import androidx.recyclerview.widget.RecyclerView;
-import android.widget.TextView;
-import android.view.View;
-import androidx.cardview.widget.CardView;
-import com.example.myapplicationtestapp.R;
-import com.example.myapplicationtestapp.model.BloodPressure;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import java.util.ArrayList;
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-public class Bloodpressureadapter extends RecyclerView.Adapter<Bloodpressureadapter.ViewHolder> {
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplicationtestapp.R;
+import com.example.myapplicationtestapp.model.Calorie;
+
+import java.util.ArrayList;
+
+public class CalorieAdapter extends RecyclerView.Adapter<CalorieAdapter.ViewHolder>  {
 
     private ArrayList<String> mData;
-    private ArrayList<BloodPressure> Data;
+    private ArrayList<Calorie> Data;
     private Context ct1;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -37,19 +40,19 @@ public class Bloodpressureadapter extends RecyclerView.Adapter<Bloodpressureadap
             card = (CardView) itemView.findViewById(R.id.lineChart);
         }
     }
-    public Bloodpressureadapter(ArrayList<String> Data1){
+    public CalorieAdapter(ArrayList<String> Data1){
 
         this.mData=Data1;
     }
 
-    public Bloodpressureadapter(ArrayList<BloodPressure> Data, Context ct)
+    public CalorieAdapter(ArrayList<Calorie> Data, Context ct)
     {
         this.Data=Data;
         this.ct1 =ct;
     }
 
     @Override
-    public Bloodpressureadapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CalorieAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.bloodcard,parent,false);
         ViewHolder vh = new ViewHolder(v);
@@ -57,12 +60,12 @@ public class Bloodpressureadapter extends RecyclerView.Adapter<Bloodpressureadap
     }
 
     @Override
-    public void onBindViewHolder(final Bloodpressureadapter.ViewHolder holder, final int position) {
-        holder.date.setText(Data.get(position).getDate()+"");
-        holder.time.setText(Data.get(position).getTime()+"");
-        holder.arm.setText(Data.get(position).getMeasuredArm()+"");
-        holder.firstReading.setText(Data.get(position).getSystolicPressure()+"");
-        holder.secondReading.setText(Data.get(position).getDiastolicPressure()+"");
+    public void onBindViewHolder(final CalorieAdapter.ViewHolder holder, final int position) {
+//        holder.date.setText(Data.get(position).getDate()+"");
+//        holder.time.setText(Data.get(position).getTime()+"");
+//        holder.arm.setText(Data.get(position).getMeasuredArm()+"");
+//        holder.firstReading.setText(Data.get(position).getSystolicPressure()+"");
+//        holder.secondReading.setText(Data.get(position).getDiastolicPressure()+"");
 
     }
 

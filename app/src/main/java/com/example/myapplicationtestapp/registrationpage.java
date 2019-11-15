@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.myapplicationtestapp.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -78,11 +79,16 @@ public class registrationpage extends AppCompatActivity {
                             user.setFirstName(firstName.getText().toString().trim());
                             user.setLastName(lastName.getText().toString().trim());
 
-                            myRef.setValue(user);
+                            myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(registrationpage.this,"Registration successful",Toast.LENGTH_SHORT).show();
+                                    Intent at = new Intent(registrationpage.this, homescreen.class);
+                                    startActivity(at);
+                                }
+                            });
                             //myRef.child("Healthcare")
-                            Toast.makeText(registrationpage.this,"Registration successful",Toast.LENGTH_SHORT).show();
-                            Intent at = new Intent(registrationpage.this, homescreen.class);
-                            startActivity(at);
+
                         }else{
                             Toast.makeText(registrationpage.this,"Error in registration",Toast.LENGTH_SHORT).show();
                         }
@@ -92,15 +98,15 @@ public class registrationpage extends AppCompatActivity {
             }
         });
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override public void onDataChange(DataSnapshot dataSnapshot) {
-                //String value = dataSnapshot.getValue(String.class);
-                // viewText.setText(value);
-            }
-            @Override public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("Ch3", "Failed to read value.", error.toException());
-            }
-        });
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override public void onDataChange(DataSnapshot dataSnapshot) {
+//                //String value = dataSnapshot.getValue(String.class);
+//                // viewText.setText(value);
+//            }
+//            @Override public void onCancelled(DatabaseError error) {
+//                // Failed to read value
+//                Log.w("Ch3", "Failed to read value.", error.toException());
+//            }
+//        });
     }
 }
