@@ -35,6 +35,8 @@ public class MedicationDashBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medication_dash_board);
 
+        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewMA);
+
         data = new ArrayList<Medication>();
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));

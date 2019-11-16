@@ -43,6 +43,7 @@ public class CaloriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calories);
         lineChart =(LineChart) findViewById(R.id.lineChart3);
+        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewCA);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
 

@@ -43,7 +43,7 @@ public class registrationpage extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("Healthcare");
+        final DatabaseReference myRef = database.getReference("users");
 
         if(firebaseAuth.getCurrentUser()!=null){
             Intent at = new Intent(registrationpage.this, homescreen.class);
@@ -87,7 +87,7 @@ public class registrationpage extends AppCompatActivity {
                                     startActivity(at);
                                 }
                             });
-                            //myRef.child("Healthcare")
+
 
                         }else{
                             Toast.makeText(registrationpage.this,"Error in registration",Toast.LENGTH_SHORT).show();

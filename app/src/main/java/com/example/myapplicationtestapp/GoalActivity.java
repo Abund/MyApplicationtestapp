@@ -36,6 +36,8 @@ public class GoalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal);
 
+        //mRecycler = (RecyclerView) findViewById(R.id.recyclerViewGA);
+
         data = new ArrayList<Goal>();
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));

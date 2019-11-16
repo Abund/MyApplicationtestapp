@@ -14,6 +14,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -29,6 +30,7 @@ public class homescreen extends AppCompatActivity
 
     TextView bloodp,bloods,cal,goal;
     Button medi;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,6 +152,12 @@ public class homescreen extends AppCompatActivity
 
         } else if (id == R.id.nav_goal) {
 
+        }else if (id == R.id.sign_out) {
+
+            firebaseAuth = FirebaseAuth.getInstance();
+            firebaseAuth.signOut();
+            Intent at = new Intent(homescreen.this, MainActivity.class);
+            startActivity(at);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

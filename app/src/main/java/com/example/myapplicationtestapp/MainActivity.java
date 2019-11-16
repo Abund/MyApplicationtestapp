@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        if(firebaseAuth.getCurrentUser()!=null){
+            Intent at = new Intent(MainActivity.this, homescreen.class);
+            startActivity(at);
+        }
 
         signIn.setOnClickListener(new View.OnClickListener(){
             @Override

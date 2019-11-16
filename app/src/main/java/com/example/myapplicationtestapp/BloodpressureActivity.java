@@ -43,9 +43,11 @@ public class BloodpressureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloodpressure);
         lineChart = (LineChart) findViewById(R.id.lineChart);
+        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewBP);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
         data = new ArrayList<BloodPressure>();
+
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
         myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");

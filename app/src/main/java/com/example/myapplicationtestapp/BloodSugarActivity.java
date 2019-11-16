@@ -48,6 +48,7 @@ public class BloodSugarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blood_sugar);
 
         lineChart =(LineChart) findViewById(R.id.lineChart2);
+        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewBSA);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
 
