@@ -7,14 +7,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.Bloodpressureadapter;
 import com.example.myapplicationtestapp.model.BloodPressure;
+
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,7 +28,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import android.view.View;
 
-import android.widget.Toast;
 
 public class BloodpressureActivity extends AppCompatActivity {
 
@@ -77,7 +79,7 @@ public class BloodpressureActivity extends AppCompatActivity {
         yValues.add(new Entry(0, 50));
         yValues.add(new Entry(1, 60));
         yValues.add(new Entry(2, 70));
-        yValues.add(new Entry(3, 80));
+        yValues.add(new Entry(3, 100));
         yValues.add(new Entry(4, 90));
         yValues.add(new Entry(5, 100));
 

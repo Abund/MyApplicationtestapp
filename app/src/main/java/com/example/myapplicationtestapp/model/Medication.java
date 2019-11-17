@@ -1,12 +1,14 @@
 package com.example.myapplicationtestapp.model;
 
+import java.util.Date;
+
 public class Medication {
 
     private String medicationName;
-    private String starteDate;
+    private Date starteDate;
     private String instructions;
     private String Units;
-    private String endDate;
+    private Date endDate;
     private String numberOfDays;
     private String notes;
     private String repeats;
@@ -14,7 +16,7 @@ public class Medication {
     public Medication() {
     }
 
-    public Medication(String medicationName, String starteDate, String instructions, String units, String endDate, String numberOfDays, String notes, String repeats) {
+    public Medication(String medicationName, Date starteDate, String instructions, String units, Date endDate, String numberOfDays, String notes, String repeats) {
         this.medicationName = medicationName;
         this.starteDate = starteDate;
         this.instructions = instructions;
@@ -33,11 +35,11 @@ public class Medication {
         this.medicationName = medicationName;
     }
 
-    public String getStarteDate() {
+    public Date getStarteDate() {
         return starteDate;
     }
 
-    public void setStarteDate(String starteDate) {
+    public void setStarteDate(Date starteDate) {
         this.starteDate = starteDate;
     }
 
@@ -57,11 +59,11 @@ public class Medication {
         Units = units;
     }
 
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 

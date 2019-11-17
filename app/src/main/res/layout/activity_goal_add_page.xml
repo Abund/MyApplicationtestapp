@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/calgoals"
         android:layout_width="123dp"
         android:layout_height="46dp"
         android:layout_marginStart="20dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <EditText
-        android:id="@+id/editText17"
+        android:id="@+id/calGoalDate"
         android:layout_width="167dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <EditText
-        android:id="@+id/editText18"
+        android:id="@+id/calGoalTime"
         android:layout_width="179dp"
         android:layout_height="47dp"
         android:layout_marginStart="15dp"
@@ -88,11 +88,11 @@
         android:layout_marginTop="63dp"
         android:ems="10"
         android:inputType="time"
-        app:layout_constraintStart_toEndOf="@+id/editText17"
+        app:layout_constraintStart_toEndOf="@+id/calGoalDate"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/calGoalSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="280dp"
@@ -102,5 +102,5 @@
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintTop_toBottomOf="@+id/calGoalTime" />
 </androidx.constraintlayout.widget.ConstraintLayout>
