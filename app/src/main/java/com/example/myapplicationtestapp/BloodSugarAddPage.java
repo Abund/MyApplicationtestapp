@@ -34,8 +34,8 @@ public class BloodSugarAddPage extends AppCompatActivity {
 
         sugarConcentration= (EditText) findViewById(R.id.sugarConcentration);
         time= (EditText) findViewById(R.id.time);
-        date= (EditText) findViewById(R.id.date);
-        notes= (EditText) findViewById(R.id.notes);
+        date= (EditText) findViewById(R.id.dateBS);
+        notes= (EditText) findViewById(R.id.notesBS);
         tags= (EditText) findViewById(R.id.tags);
         measured= (AutoCompleteTextView) findViewById(R.id.measured);
 
@@ -63,7 +63,7 @@ public class BloodSugarAddPage extends AppCompatActivity {
                 myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(bloodSugar).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(BloodSugarAddPage.this,"Registration successful",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BloodSugarAddPage.this,"Successful",Toast.LENGTH_SHORT).show();
                         Intent at = new Intent(BloodSugarAddPage.this, homescreen.class);
                         startActivity(at);
                     }

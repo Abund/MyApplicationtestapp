@@ -34,8 +34,8 @@ public class bloodpressureaddpage extends AppCompatActivity {
 
         systolicPressure= (EditText) findViewById(R.id.sugarConcentration);
         diastolicPressure= (EditText) findViewById(R.id.time);
-        date= (EditText) findViewById(R.id.date);
-        notes= (EditText) findViewById(R.id.notes);
+        date= (EditText) findViewById(R.id.pressuredate);
+        notes= (EditText) findViewById(R.id.notesBP);
         tags= (EditText) findViewById(R.id.tags);
         measured= (AutoCompleteTextView) findViewById(R.id.measured);
 
@@ -64,7 +64,7 @@ public class bloodpressureaddpage extends AppCompatActivity {
                 myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(bloodPressure).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(bloodpressureaddpage.this,"Registration successful",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(bloodpressureaddpage.this,"Successful",Toast.LENGTH_SHORT).show();
                         Intent at = new Intent(bloodpressureaddpage.this, homescreen.class);
                         startActivity(at);
                     }

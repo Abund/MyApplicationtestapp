@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/measured" />
 
     <EditText
-        android:id="@+id/date"
+        android:id="@+id/dateBS"
         android:layout_width="158dp"
         android:layout_height="39dp"
         android:layout_marginStart="28dp"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <EditText
-        android:id="@+id/time"
+        android:id="@+id/timeBS"
         android:layout_width="172dp"
         android:layout_height="45dp"
         android:layout_marginStart="34dp"
@@ -97,7 +97,7 @@
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/dateBS"
         app:layout_constraintTop_toBottomOf="@+id/sugarConcentration" />
 
     <TextView
@@ -109,10 +109,10 @@
         android:layout_marginTop="20dp"
         android:text="Notes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
+        app:layout_constraintTop_toBottomOf="@+id/dateBS" />
 
     <EditText
-        android:id="@+id/notes"
+        android:id="@+id/notesBS"
         android:layout_width="359dp"
         android:layout_height="46dp"
         android:layout_marginStart="28dp"
@@ -132,10 +132,10 @@
         android:layout_marginTop="16dp"
         android:text="Tags"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notes" />
+        app:layout_constraintTop_toBottomOf="@+id/notesBS" />
 
     <EditText
-        android:id="@+id/tags"
+        android:id="@+id/tagsBS"
         android:layout_width="356dp"
         android:layout_height="47dp"
         android:layout_marginStart="28dp"

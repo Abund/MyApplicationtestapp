@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.myapplicationtestapp.model.Goal;
 import com.example.myapplicationtestapp.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,6 +45,7 @@ public class registrationpage extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("users");
+        final DatabaseReference myRef1 = database.getReference("goal");
 
         if(firebaseAuth.getCurrentUser()!=null){
             Intent at = new Intent(registrationpage.this, homescreen.class);
@@ -88,6 +90,13 @@ public class registrationpage extends AppCompatActivity {
                                 }
                             });
 
+                            Goal goal = new Goal();
+                            goal.setGoal("2700");
+                            myRef1.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(goal).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                }
+                            });
 
                         }else{
                             Toast.makeText(registrationpage.this,"Error in registration",Toast.LENGTH_SHORT).show();
