@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,6 +27,7 @@ public class bloodpressureaddpage extends AppCompatActivity {
     private AutoCompleteTextView measured;
     private DatabaseReference myRef;
     Date dob_var;
+    String str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class bloodpressureaddpage extends AppCompatActivity {
         notes= (EditText) findViewById(R.id.notesBP);
         tags= (EditText) findViewById(R.id.tags);
         measured= (AutoCompleteTextView) findViewById(R.id.measured);
+        time= (AutoCompleteTextView) findViewById(R.id.pressureTime);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("BloodSugar");
@@ -49,6 +52,8 @@ public class bloodpressureaddpage extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
                 try {
                     dob_var = sdf.parse(date.getText().toString());
+//                    str = time.getText().toString();
+//                    DateFormat formatter = new SimpleDateFormat("hh:mm:ss a");
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }

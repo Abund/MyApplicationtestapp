@@ -8,14 +8,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingRight="5dp"
         android:paddingLeft="5dp"
+        android:paddingTop="7dp"
         >
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginRight="150dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,7 +38,7 @@
                 android:orientation="vertical">
                 <!--add corresponding contents-->
                 <TextView
-                    android:id="@+id/date"
+                    android:id="@+id/dateBloodCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -44,7 +46,7 @@
                     android:layout_marginStart="4dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
                 <TextView
-                    android:id="@+id/time11"
+                    android:id="@+id/instBloodCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -67,13 +69,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/concentration"
+                    android:id="@+id/concentrationBS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="4dp"
-
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
                 <TextView
                     android:id="@+id/units"
@@ -82,7 +83,7 @@
                     android:layout_marginLeft="4dp"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="4dp"
-
+                    android:text="mg/dL"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
             </LinearLayout>
 

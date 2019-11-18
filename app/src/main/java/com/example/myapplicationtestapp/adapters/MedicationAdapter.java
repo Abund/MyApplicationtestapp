@@ -23,21 +23,17 @@ public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView date;
-        public TextView time;
-        public TextView arm;
-        public TextView firstReading;
-        public TextView secondReading;
+        public TextView drugName;
+        public TextView infoMD;
         public View layout;
         public CardView card;
 
         public ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            date = (TextView) itemView.findViewById(R.id.date);
-            time = (TextView) itemView.findViewById(R.id.time11);
-            arm = (TextView) itemView.findViewById(R.id.arm);
-            firstReading = (TextView) itemView.findViewById(R.id.reading1);
-            secondReading = (TextView) itemView.findViewById(R.id.reading2);
+            date = (TextView) itemView.findViewById(R.id.dateMediCard);
+            drugName = (TextView) itemView.findViewById(R.id.drugName);
+            infoMD = (TextView) itemView.findViewById(R.id.infoMD);
             card = (CardView) itemView.findViewById(R.id.lineChart);
         }
     }
@@ -62,11 +58,9 @@ public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.Vi
 
     @Override
     public void onBindViewHolder(final MedicationAdapter.ViewHolder holder, final int position) {
-//        holder.date.setText(Data.get(position).getDate()+"");
-//        holder.time.setText(Data.get(position).getTime()+"");
-//        holder.arm.setText(Data.get(position).getMeasuredArm()+"");
-//        holder.firstReading.setText(Data.get(position).getSystolicPressure()+"");
-//        holder.secondReading.setText(Data.get(position).getDiastolicPressure()+"");
+        holder.date.setText(Data.get(position).getStarteDate()+"");
+        holder.drugName.setText(Data.get(position).getMedicationName()+"");
+        holder.infoMD.setText(Data.get(position).getInstructions()+"");
 
     }
 

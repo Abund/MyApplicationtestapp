@@ -26,14 +26,12 @@ public class BloodSugarAdapter extends RecyclerView.Adapter<BloodSugarAdapter.Vi
         public ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            date = (TextView) itemView.findViewById(R.id.date);
-            time = (TextView) itemView.findViewById(R.id.time11);
-            concentration = (TextView) itemView.findViewById(R.id.reading1);
-            card = (CardView) itemView.findViewById(R.id.lineChart);
+            date = (TextView) itemView.findViewById(R.id.dateBloodCard);
+            time = (TextView) itemView.findViewById(R.id.instBloodCard);
+            concentration = (TextView) itemView.findViewById(R.id.concentrationBS);
         }
     }
     public BloodSugarAdapter(ArrayList<String> Data1){
-
         this.mData=Data1;
     }
 
@@ -46,7 +44,7 @@ public class BloodSugarAdapter extends RecyclerView.Adapter<BloodSugarAdapter.Vi
     @Override
     public BloodSugarAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.bloodcard,parent,false);
+                .inflate(R.layout.bloodsugarcard,parent,false);
         // set the view size, margin,padding and layout parameters
         BloodSugarAdapter.ViewHolder vh = new BloodSugarAdapter.ViewHolder(v);
         return vh;

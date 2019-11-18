@@ -11,6 +11,7 @@
         android:orientation="horizontal"
         android:paddingRight="5dp"
         android:paddingLeft="5dp"
+        android:paddingTop="7dp"
 
         >
         <LinearLayout
@@ -38,7 +39,7 @@
                 android:orientation="vertical">
                 <!--add corresponding contents-->
                 <TextView
-                    android:id="@+id/date"
+                    android:id="@+id/datePressureCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -46,7 +47,7 @@
                     android:layout_marginStart="4dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
                 <TextView
-                    android:id="@+id/time11"
+                    android:id="@+id/timePressureCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"

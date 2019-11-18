@@ -22,22 +22,16 @@ public class GoalAdapter extends RecyclerView.Adapter<GoalAdapter.ViewHolder> {
     private Context ct1;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView date;
         public TextView time;
-        public TextView arm;
-        public TextView firstReading;
-        public TextView secondReading;
+        public TextView goalReading;
         public View layout;
         public CardView card;
 
         public ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            date = (TextView) itemView.findViewById(R.id.date);
-            time = (TextView) itemView.findViewById(R.id.time11);
-            arm = (TextView) itemView.findViewById(R.id.arm);
-            firstReading = (TextView) itemView.findViewById(R.id.reading1);
-            secondReading = (TextView) itemView.findViewById(R.id.reading2);
+            time = (TextView) itemView.findViewById(R.id.timeRealDate);
+            goalReading = (TextView) itemView.findViewById(R.id.measurementGoalCard);
             card = (CardView) itemView.findViewById(R.id.lineChart);
         }
     }
@@ -55,18 +49,15 @@ public class GoalAdapter extends RecyclerView.Adapter<GoalAdapter.ViewHolder> {
     @Override
     public GoalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.bloodcard,parent,false);
+                .inflate(R.layout.goalcard,parent,false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(final GoalAdapter.ViewHolder holder, final int position) {
-//        holder.date.setText(Data.get(position).getDate()+"");
-//        holder.time.setText(Data.get(position).getTime()+"");
-//        holder.arm.setText(Data.get(position).getMeasuredArm()+"");
-//        holder.firstReading.setText(Data.get(position).getSystolicPressure()+"");
-//        holder.secondReading.setText(Data.get(position).getDiastolicPressure()+"");
+        holder.time.setText(Data.get(position).getDate()+"");
+        holder.goalReading.setText(Data.get(position).getGoal()+"");
 
     }
 
