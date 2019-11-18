@@ -23,20 +23,18 @@ public class CalorieAdapter extends RecyclerView.Adapter<CalorieAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView date;
         public TextView time;
-        public TextView arm;
-        public TextView firstReading;
-        public TextView secondReading;
+        public TextView timeType;
+        public TextView calorieUnits;
         public View layout;
         public CardView card;
 
         public ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            date = (TextView) itemView.findViewById(R.id.date);
-            //time = (TextView) itemView.findViewById(R.id.time11);
-            arm = (TextView) itemView.findViewById(R.id.arm);
-            firstReading = (TextView) itemView.findViewById(R.id.reading1);
-            secondReading = (TextView) itemView.findViewById(R.id.reading2);
+            date = (TextView) itemView.findViewById(R.id.dateCalorieCard);
+            time = (TextView) itemView.findViewById(R.id.timeCalorie);
+            timeType = (TextView) itemView.findViewById(R.id.timeTypeCalorieCard);
+            calorieUnits = (TextView) itemView.findViewById(R.id.calorieUnits);
             card = (CardView) itemView.findViewById(R.id.lineChart);
         }
     }
@@ -61,11 +59,10 @@ public class CalorieAdapter extends RecyclerView.Adapter<CalorieAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(final CalorieAdapter.ViewHolder holder, final int position) {
-//        holder.date.setText(Data.get(position).getDate()+"");
-//        holder.time.setText(Data.get(position).getTime()+"");
-//        holder.arm.setText(Data.get(position).getMeasuredArm()+"");
-//        holder.firstReading.setText(Data.get(position).getSystolicPressure()+"");
-//        holder.secondReading.setText(Data.get(position).getDiastolicPressure()+"");
+        holder.date.setText(Data.get(position).getDate()+"");
+        holder.time.setText(Data.get(position).getTime()+"");
+        holder.timeType.setText(Data.get(position).getTimeType()+"");
+        holder.calorieUnits.setText(Data.get(position).getCalorieUnits()+"");
 
     }
 

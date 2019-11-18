@@ -38,7 +38,7 @@
                 android:orientation="vertical">
                 <!--add corresponding contents-->
                 <TextView
-                    android:id="@+id/dateBloodCard"
+                    android:id="@+id/dateCalorieCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -46,14 +46,26 @@
                     android:layout_marginStart="4dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
                 <TextView
-                    android:id="@+id/instBloodCard"
+                    android:id="@+id/timeTypeCalorieCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="4dp"
-
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--add image-->
+                <TextView
+                    android:id="@+id/timeCalorie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="4dp"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -69,21 +81,20 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/concentrationBS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="4dp"
+                    android:text="Calories"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
                 <TextView
-                    android:id="@+id/units"
+                    android:id="@+id/calorieUnits"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="4dp"
-                    android:text="mg/dL"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
             </LinearLayout>
 
