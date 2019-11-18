@@ -33,7 +33,7 @@ public class CalorieAdapter extends RecyclerView.Adapter<CalorieAdapter.ViewHold
             super(itemView);
             layout = itemView;
             date = (TextView) itemView.findViewById(R.id.date);
-            time = (TextView) itemView.findViewById(R.id.time11);
+            //time = (TextView) itemView.findViewById(R.id.time11);
             arm = (TextView) itemView.findViewById(R.id.arm);
             firstReading = (TextView) itemView.findViewById(R.id.reading1);
             secondReading = (TextView) itemView.findViewById(R.id.reading2);
