@@ -72,7 +72,7 @@
         android:layout_marginTop="132dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_menu_manage" />
+        app:srcCompat="@drawable/bloodpressureicon" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -87,7 +87,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_menu_manage" />
+        app:srcCompat="@drawable/bloodsugar" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -98,7 +98,7 @@
         android:layout_marginRight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/ic_menu_manage" />
+        app:srcCompat="@drawable/calories" />
 
     <TextView
         android:id="@+id/bloodPressureT"
@@ -160,7 +160,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medibutton"
-        app:srcCompat="@drawable/ic_menu_manage" />
+        app:srcCompat="@drawable/tgoalicon" />
 
     <TextView
         android:id="@+id/goals"
