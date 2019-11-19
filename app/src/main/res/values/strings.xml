@@ -19,4 +19,5 @@
     <string name="menu_bpressure">Blood Pressure</string>
     <string name="menu_bsugar">Blood Sugar</string>
     <string name="menu_calories">Calories</string>
+    <string name="menu_logout">Log out</string>
 </resources>

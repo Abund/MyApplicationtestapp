@@ -1,5 +1,6 @@
 package com.example.myapplicationtestapp;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -140,9 +141,11 @@ public class homescreen extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getFragmentManager();
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_bpressure) {
+            //fragmentManager.beginTransaction().replace(R.id.content_frame, new BloodpressureActivity()).commit();
 
         } else if (id == R.id.nav_bsugar) {
 

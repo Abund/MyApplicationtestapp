@@ -32,7 +32,7 @@
         <item
             android:id="@+id/sign_out"
             android:icon="@drawable/ic_directions_run_black_24dp"
-            android:title="@string/menu_calories" />
+            android:title="@string/menu_logout" />
     </group>
 
 </menu>
