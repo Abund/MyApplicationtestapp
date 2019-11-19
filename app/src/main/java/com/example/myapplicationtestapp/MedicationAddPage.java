@@ -32,6 +32,7 @@ public class MedicationAddPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medication_add_page2);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         medicationName= (EditText) findViewById(R.id.medicationName);
         startDate= (EditText) findViewById(R.id.dateMedi);

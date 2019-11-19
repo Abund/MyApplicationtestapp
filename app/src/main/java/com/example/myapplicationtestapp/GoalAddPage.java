@@ -30,6 +30,7 @@ public class GoalAddPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal_add_page);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         time= (EditText) findViewById(R.id.calGoalTime);
         date= (EditText) findViewById(R.id.calGoalDate);

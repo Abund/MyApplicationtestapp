@@ -31,6 +31,7 @@ public class BloodSugarAddPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood_sugar_add_page);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         sugarConcentration= (EditText) findViewById(R.id.sugarConcentration);
         time= (EditText) findViewById(R.id.time);

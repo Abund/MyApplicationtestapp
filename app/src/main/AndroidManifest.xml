@@ -10,15 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoalAddPage"></activity>
-        <activity android:name=".MedicationAddPage" />
+        <activity android:name=".GoalAddPage"
+            android:parentActivityName=".GoalActivity"
+            ></activity>
+        <activity android:name=".MedicationAddPage"
+            android:parentActivityName=".MedicationDashBoard"
+            />
         <activity android:name=".MedicationDashBoard" />
-        <activity android:name=".CaloriesAddPage" />
-        <activity android:name=".BloodSugarAddPage" />
+        <activity android:name=".CaloriesAddPage"
+            android:parentActivityName=".CaloriesActivity"
+            />
+        <activity android:name=".BloodSugarAddPage"
+            android:parentActivityName=".BloodSugarActivity"
+            />
         <activity android:name=".GoalActivity" />
         <activity android:name=".CaloriesActivity" />
         <activity android:name=".BloodSugarActivity" />
-        <activity android:name=".bloodpressureaddpage" />
+        <activity android:name=".bloodpressureaddpage"
+            android:parentActivityName=".BloodpressureActivity"
+            />
         <activity android:name=".BloodpressureActivity" />
         <activity
             android:name=".homescreen"

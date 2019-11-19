@@ -33,6 +33,7 @@ public class bloodpressureaddpage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloodpressureaddpage);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         systolicPressure= (EditText) findViewById(R.id.sugarConcentration);
         diastolicPressure= (EditText) findViewById(R.id.time);
