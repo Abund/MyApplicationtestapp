@@ -1,12 +1,15 @@
 package com.example.myapplicationtestapp;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.Bloodpressureadapter;
@@ -28,8 +31,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import android.view.View;
 
-
-public class BloodpressureActivity extends AppCompatActivity {
+//public class BloodpressureActivity extends AppCompatActivity {
+public class BloodpressureActivity extends Fragment {
 
     private LineChart lineChart;
     private RecyclerView mRecycler;
@@ -39,19 +42,25 @@ public class BloodpressureActivity extends AppCompatActivity {
     private ArrayList<String> mData;
     private DatabaseReference myRef;
     private Bloodpressureadapter bloodpressureadapter;
+    View view;
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater , ViewGroup container, Bundle savedInstanceState) {
+        view= inflater.inflate(R.layout.activity_bloodpressure,container,false);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bloodpressure);
-        lineChart = (LineChart) findViewById(R.id.lineChart);
-        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewBP);
+        //setContentView(R.layout.activity_bloodpressure);
+        lineChart = (LineChart) view.findViewById(R.id.lineChart);
+        mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewBP);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
         data = new ArrayList<BloodPressure>();
 
         mRecycler.setHasFixedSize(true);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
 
         myRef.addValueEventListener(new ValueEventListener() {
@@ -61,13 +70,13 @@ public class BloodpressureActivity extends AppCompatActivity {
                     BloodPressure bloodPressure = dataSnapshot1.getValue(BloodPressure.class);
                     data.add(bloodPressure);
                 }
-                bloodpressureadapter = new Bloodpressureadapter(data,BloodpressureActivity.this);
+                bloodpressureadapter = new Bloodpressureadapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(bloodpressureadapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(BloodpressureActivity.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -92,14 +101,33 @@ public class BloodpressureActivity extends AppCompatActivity {
         LineData data = new LineData(dataSets);
         lineChart.setData(data);
 
-        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+        FloatingActionButton fab = view.findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent at = new Intent(BloodpressureActivity.this, bloodpressureaddpage.class);
+                Intent at = new Intent(getActivity().getBaseContext(), bloodpressureaddpage.class);
                 startActivity(at);
             }
         });
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //you can set the title for your toolbar here for different fragments different titles
+        getActivity().setTitle("HealthCare ");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
+
+    public void onRefresh() {
+        Toast.makeText(getActivity(), "Fragment : Refresh called.",
+                Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -1,37 +1,51 @@
 package com.example.myapplicationtestapp;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.myapplicationtestapp.model.User;
 
+import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class homescreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView bloodp,bloods,cal,goal;
+    TextView bloodp,bloods,cal,goal,clientName;
     Button medi;
     FirebaseAuth firebaseAuth;
+    FirebaseUser userf;
+    DatabaseReference myRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +53,11 @@ public class homescreen extends AppCompatActivity
         setContentView(R.layout.activity_homescreen);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference=database.getReference("users");
+        myRef = FirebaseDatabase.getInstance().getReference().child("users");
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -60,44 +71,57 @@ public class homescreen extends AppCompatActivity
         cal = (TextView) findViewById(R.id.calories);
         goal = (TextView) findViewById(R.id.goals);
         medi=(Button) findViewById(R.id.medibutton);
+        clientName = (TextView) findViewById(R.id.clientName);
+        firebaseAuth =FirebaseAuth.getInstance();
+        userf=firebaseAuth.getCurrentUser();
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<String> keys = new ArrayList<>();
+                User user= new User();
+                user=dataSnapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getValue(User.class);
+                clientName.setText(user.getFirstName());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(homescreen.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         bloodp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent at = new Intent(homescreen.this, BloodpressureActivity.class);
-                startActivity(at);
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new BloodpressureActivity()).commit();
             }
         });
 
         bloods.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent at = new Intent(homescreen.this, BloodSugarActivity.class);
-                startActivity(at);
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new BloodSugarActivity()).commit();
             }
         });
 
         cal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent at = new Intent(homescreen.this, CaloriesActivity.class);
-                startActivity(at);
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new CaloriesActivity()).commit();
             }
         });
 
         goal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent at = new Intent(homescreen.this, GoalActivity.class);
-                startActivity(at);
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new GoalActivity()).commit();
             }
         });
 
         medi.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent at = new Intent(homescreen.this, MedicationDashBoard.class);
-                startActivity(at);
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new MedicationDashBoard()).commit();
             }
         });
 
@@ -140,20 +164,33 @@ public class homescreen extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        //FragmentManager fragmentManager = getSupportFragmentManager();
 
-        FragmentManager fragmentManager = getFragmentManager();
         if (id == R.id.nav_home) {
             // Handle the camera action
+            Intent at = new Intent(homescreen.this, homescreen.class);
+            startActivity(at);
         } else if (id == R.id.nav_bpressure) {
-            //fragmentManager.beginTransaction().replace(R.id.content_frame, new BloodpressureActivity()).commit();
+            Fragment newFragment =  new BloodpressureActivity();
+//            FragmentTransaction ft = getFragmentManager().beginTransaction();
+//            ft.add(R.id.content_frame, newFragment).commit();
+            replaceFragment(newFragment);
 
         } else if (id == R.id.nav_bsugar) {
+            Fragment newFragment =  new BloodpressureActivity();
+            replaceFragment(newFragment);
 
         } else if (id == R.id.nav_calorie) {
+            Fragment newFragment =  new BloodpressureActivity();
+            replaceFragment(newFragment);
 
         } else if (id == R.id.nav_mreminder) {
+            Fragment newFragment =  new BloodpressureActivity();
+            replaceFragment(newFragment);
 
         } else if (id == R.id.nav_goal) {
+            Fragment newFragment =  new BloodpressureActivity();
+            replaceFragment(newFragment);
 
         }else if (id == R.id.sign_out) {
 
@@ -166,5 +203,20 @@ public class homescreen extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void replaceFragment(Fragment destFragment)
+    {
+        // First get FragmentManager object.
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
+
+        // Begin Fragment transaction.
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // Replace the layout holder with the required Fragment object.
+        fragmentTransaction.replace(R.id.content_frame, destFragment);
+
+        // Commit the Fragment replace action.
+        fragmentTransaction.commit();
     }
 }

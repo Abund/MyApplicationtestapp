@@ -1,13 +1,17 @@
 package com.example.myapplicationtestapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.MedicationAdapter;
@@ -21,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MedicationDashBoard extends AppCompatActivity {
+public class MedicationDashBoard extends Fragment {
     private RecyclerView mRecycler;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
@@ -29,17 +33,24 @@ public class MedicationDashBoard extends AppCompatActivity {
     private ArrayList<String> mData;
     private DatabaseReference myRef;
     private MedicationAdapter medicationAdapter;
+    View view;
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_medication_dash_board);
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater , ViewGroup container, Bundle savedInstanceState) {
+        view= inflater.inflate(R.layout.activity_medication_dash_board,container,false);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medication_dash_board);
 
-        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewMA);
+        mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewMA1);
 
         data = new ArrayList<Medication>();
         mRecycler.setHasFixedSize(true);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
 
         myRef.addValueEventListener(new ValueEventListener() {
@@ -49,23 +60,24 @@ public class MedicationDashBoard extends AppCompatActivity {
                     Medication medication = dataSnapshot1.getValue(Medication.class);
                     data.add(medication);
                 }
-                medicationAdapter = new MedicationAdapter(data,MedicationDashBoard.this);
+                medicationAdapter = new MedicationAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(medicationAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MedicationDashBoard.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.floatingActionButtonMD);
+        FloatingActionButton fab = view.findViewById(R.id.floatingActionButtonMD);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent at = new Intent(MedicationDashBoard.this, MedicationAddPage.class);
+                Intent at = new Intent(getActivity().getBaseContext(), MedicationAddPage.class);
                 startActivity(at);
             }
         });
+        return view;
     }
 }

@@ -1,13 +1,17 @@
 package com.example.myapplicationtestapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.GoalAdapter;
@@ -21,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class GoalActivity extends AppCompatActivity {
+public class GoalActivity extends Fragment {
 
     private RecyclerView mRecycler;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -30,17 +34,24 @@ public class GoalActivity extends AppCompatActivity {
     private ArrayList<String> mData;
     private DatabaseReference myRef;
     private GoalAdapter goalAdapter;
+    View view;
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_goal);
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater , ViewGroup container, Bundle savedInstanceState) {
+        view= inflater.inflate(R.layout.activity_goal,container,false);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_goal);
 
-        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewGA);
+        mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewGA);
 
         data = new ArrayList<Goal>();
         mRecycler.setHasFixedSize(true);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
 
         myRef.addValueEventListener(new ValueEventListener() {
@@ -50,23 +61,24 @@ public class GoalActivity extends AppCompatActivity {
                     Goal goal = dataSnapshot1.getValue(Goal.class);
                     data.add(goal);
                 }
-                goalAdapter = new GoalAdapter(data,GoalActivity.this);
+                goalAdapter = new GoalAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(goalAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(GoalActivity.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.floatingActionButtonGA);
+        FloatingActionButton fab = view.findViewById(R.id.floatingActionButtonGA);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent at = new Intent(GoalActivity.this, GoalAddPage.class);
+                Intent at = new Intent(getActivity().getBaseContext(), GoalAddPage.class);
                 startActivity(at);
             }
         });
+        return view;
     }
 }

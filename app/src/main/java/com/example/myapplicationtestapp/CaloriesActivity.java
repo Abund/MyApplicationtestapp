@@ -1,13 +1,17 @@
 package com.example.myapplicationtestapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.CalorieAdapter;
@@ -27,7 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class CaloriesActivity extends AppCompatActivity {
+public class CaloriesActivity extends Fragment {
 
     private LineChart lineChart;
     private RecyclerView mRecycler;
@@ -37,19 +41,26 @@ public class CaloriesActivity extends AppCompatActivity {
     private ArrayList<String> mData;
     private DatabaseReference myRef;
     private CalorieAdapter calorieAdapter;
+    View view;
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_calories);
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater , ViewGroup container, Bundle savedInstanceState) {
+        view= inflater.inflate(R.layout.activity_calories,container,false);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calories);
-        lineChart =(LineChart) findViewById(R.id.lineChart3);
-        mRecycler = (RecyclerView) findViewById(R.id.recyclerViewCA);
+        lineChart =(LineChart) view.findViewById(R.id.lineChart3);
+        mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewCA);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
 
         data = new ArrayList<Calorie>();
         mRecycler.setHasFixedSize(true);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
 
         myRef.addValueEventListener(new ValueEventListener() {
@@ -59,13 +70,13 @@ public class CaloriesActivity extends AppCompatActivity {
                     Calorie calorie = dataSnapshot1.getValue(Calorie.class);
                     data.add(calorie);
                 }
-                calorieAdapter = new CalorieAdapter(data,CaloriesActivity.this);
+                calorieAdapter = new CalorieAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(calorieAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(CaloriesActivity.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -90,13 +101,14 @@ public class CaloriesActivity extends AppCompatActivity {
         LineData data = new LineData(dataSets);
         lineChart.setData(data);
 
-        FloatingActionButton fab = findViewById(R.id.floatingActionButton2);
+        FloatingActionButton fab = view.findViewById(R.id.floatingActionButton2);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent at = new Intent(CaloriesActivity.this, CaloriesAddPage.class);
+                Intent at = new Intent(getActivity().getBaseContext(), CaloriesAddPage.class);
                 startActivity(at);
             }
         });
+        return view;
     }
 }
