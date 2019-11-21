@@ -59,7 +59,7 @@ public class registrationpage extends AppCompatActivity {
                 String email1 = email.getText().toString().trim();
                 String password1 = password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email1)){
+                if(TextUtils.isEmpty(email.getText().toString().trim())){
                     email.setError("Email is required");
                 }
                 if(TextUtils.isEmpty(password1)){

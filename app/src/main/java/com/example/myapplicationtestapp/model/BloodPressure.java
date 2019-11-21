@@ -6,9 +6,9 @@ import java.util.Date;
 public class BloodPressure {
     private int systolicPressure;
     private int diastolicPressure;
-    private int measuredArm;
-    private Date date;
-    private Time time;
+    private String measuredArm;
+    private String date;
+    private String time;
     private String notes;
     private String tag;
 
@@ -28,27 +28,27 @@ public class BloodPressure {
         this.diastolicPressure = diastolicPressure;
     }
 
-    public int getMeasuredArm() {
+    public String getMeasuredArm() {
         return measuredArm;
     }
 
-    public void setMeasuredArm(int measuredArm) {
+    public void setMeasuredArm(String measuredArm) {
         this.measuredArm = measuredArm;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

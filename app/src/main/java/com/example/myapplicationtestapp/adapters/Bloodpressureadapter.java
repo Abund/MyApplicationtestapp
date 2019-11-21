@@ -29,7 +29,7 @@ public class Bloodpressureadapter extends RecyclerView.Adapter<Bloodpressureadap
         public ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            date = (TextView) itemView.findViewById(R.id.date);
+            date = (TextView) itemView.findViewById(R.id.datePressureCard);
             time = (TextView) itemView.findViewById(R.id.timePressureCard);
             arm = (TextView) itemView.findViewById(R.id.arm);
             firstReading = (TextView) itemView.findViewById(R.id.reading1);

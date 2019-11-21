@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bloodpressureaddpage">
+    tools:context=".bloodpressureaddpage"
+    android:id="@+id/pAddPage">
 
     <TextView
         android:id="@+id/textView8"
@@ -121,18 +122,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/measuredArm" />
 
-    <AutoCompleteTextView
+    <TextView
         android:id="@+id/pressuredate"
         android:layout_width="164dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="Date"
+        android:text=""
+        android:hint="Date"
+        android:background="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-    <AutoCompleteTextView
+    <ImageView
+        android:id="@+id/dateImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:src="@drawable/ic_signal_cellular_4_bar_24px"
+        app:layout_constraintEnd_toStartOf="@+id/pressureTime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/pressuredate"
+        app:layout_constraintTop_toTopOf="@+id/pressuredate" />
+
+    <TextView
         android:id="@+id/pressureTime"
         android:layout_width="168dp"
         android:layout_height="49dp"
@@ -141,11 +159,28 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:text="Time"
+        android:text=""
+        android:hint="Time"
+        android:background="@drawable/back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/pressuredate"
         app:layout_constraintTop_toBottomOf="@+id/measuredArm" />
+
+    <ImageView
+        android:id="@+id/timeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="39dp"
+        android:src="@drawable/ic_signal_cellular_4_bar_24px"
+        app:layout_constraintBottom_toTopOf="@+id/notesBP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/pressureTime" />
 
     <TextView
         android:id="@+id/textView15"
