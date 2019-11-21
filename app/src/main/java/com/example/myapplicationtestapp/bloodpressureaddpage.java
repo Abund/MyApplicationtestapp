@@ -83,11 +83,11 @@ public class bloodpressureaddpage extends AppCompatActivity implements DatePicke
             @Override
             public void onClick(View v){
                 DialogFragment timePicker = new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(),"date picker");
+                timePicker.show(getSupportFragmentManager(),"time picker");
             }
         });
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("BloodPressure");
+        myRef = database.getReference("BloodPressure").child(FirebaseAuth.getInstance().getUid()).push();
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButtonA);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +123,8 @@ public class bloodpressureaddpage extends AppCompatActivity implements DatePicke
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+
+
                 BloodPressure bloodPressure = new BloodPressure();
                 bloodPressure.setDate(date.getText().toString());
                 bloodPressure.setDiastolicPressure(Integer.parseInt(diastolicPressure.getText().toString()));
@@ -132,12 +134,13 @@ public class bloodpressureaddpage extends AppCompatActivity implements DatePicke
                 bloodPressure.setNotes(notes.getText().toString().trim());
                 bloodPressure.setSystolicPressure(Integer.parseInt(systolicPressure.getText().toString()));
 
-                myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(bloodPressure).addOnSuccessListener(new OnSuccessListener<Void>() {
+                myRef.setValue(bloodPressure).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(bloodpressureaddpage.this,"Successful",Toast.LENGTH_SHORT).show();
-                        FragmentManager fragmentManager =getSupportFragmentManager();
-                        fragmentManager.beginTransaction().replace(R.id.pAddPage, new BloodpressureActivity()).commit();
+                        finish();
+//                        FragmentManager fragmentManager =getSupportFragmentManager();
+//                        fragmentManager.beginTransaction().replace(R.id.pAddPage, new BloodpressureActivity()).commit();
 //                        Intent at = new Intent(bloodpressureaddpage.this, homescreen.class);
 //                        startActivity(at);
                     }

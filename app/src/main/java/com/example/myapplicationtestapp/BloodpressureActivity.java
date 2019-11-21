@@ -22,10 +22,12 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -43,6 +45,7 @@ public class BloodpressureActivity extends Fragment {
     private DatabaseReference myRef;
     private Bloodpressureadapter bloodpressureadapter;
     View view;
+    private DatabaseReference myRefOnline;
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +64,16 @@ public class BloodpressureActivity extends Fragment {
 
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
-        myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
+      //  myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure").child(FirebaseAuth.getInstance().getUid()).push();
+        myRefOnline = FirebaseDatabase.getInstance().getReference().child("BloodPressure").child(FirebaseAuth.getInstance().getUid());
 
-        myRef.addValueEventListener(new ValueEventListener() {
+        myRefOnline.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getChildrenCount() == 0){
+                    return;
+                }
+
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
                     BloodPressure bloodPressure = dataSnapshot1.getValue(BloodPressure.class);
                     data.add(bloodPressure);
@@ -76,9 +84,25 @@ public class BloodpressureActivity extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+
             }
         });
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+//                    BloodPressure bloodPressure = dataSnapshot1.getValue(BloodPressure.class);
+//                    data.add(bloodPressure);
+//                }
+//                bloodpressureadapter = new Bloodpressureadapter(data,getActivity().getBaseContext());
+//                mRecycler.setAdapter(bloodpressureadapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         lineChart.setDragEnabled(true);
         lineChart.setScaleEnabled(true);
