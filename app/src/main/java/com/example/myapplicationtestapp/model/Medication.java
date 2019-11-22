@@ -5,10 +5,10 @@ import java.util.Date;
 public class Medication {
 
     private String medicationName;
-    private Date starteDate;
+    private String starteDate;
     private String instructions;
     private String Units;
-    private Date endDate;
+    private String endDate;
     private String numberOfDays;
     private String notes;
     private String repeats;
@@ -16,7 +16,7 @@ public class Medication {
     public Medication() {
     }
 
-    public Medication(String medicationName, Date starteDate, String instructions, String units, Date endDate, String numberOfDays, String notes, String repeats) {
+    public Medication(String medicationName, String starteDate, String instructions, String units, String endDate, String numberOfDays, String notes, String repeats) {
         this.medicationName = medicationName;
         this.starteDate = starteDate;
         this.instructions = instructions;
@@ -35,11 +35,11 @@ public class Medication {
         this.medicationName = medicationName;
     }
 
-    public Date getStarteDate() {
+    public String getStarteDate() {
         return starteDate;
     }
 
-    public void setStarteDate(Date starteDate) {
+    public void setStarteDate(String starteDate) {
         this.starteDate = starteDate;
     }
 
@@ -59,11 +59,11 @@ public class Medication {
         Units = units;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

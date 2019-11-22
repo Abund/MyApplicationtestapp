@@ -26,8 +26,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener  {
@@ -37,7 +39,6 @@ public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDi
     private TextView date,time;
     private DatabaseReference myRef;
     private ImageView measuredPointer,imgDate,imgTime;
-    Date dob_var;
     private static final String[] meas=new String[]{"Before breakfast","After breakfast","Before lunch","After lunch","Before dinner" +
             "","After dinner","Before sleep","After sleep","Fasting","Other"};
 
@@ -48,11 +49,11 @@ public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         sugarConcentration= (EditText) findViewById(R.id.sugarConcentration);
-        measuredPointer=(ImageView) findViewById(R.id.measuredPointerBP);
+        measuredPointer=(ImageView) findViewById(R.id.measuredPointer);
         time= (TextView) findViewById(R.id.timeBS);
         date= (TextView) findViewById(R.id.dateBS);
         notes= (EditText) findViewById(R.id.notesBS);
-        tags= (EditText) findViewById(R.id.tags);
+        tags= (EditText) findViewById(R.id.tagsBS);
         measured= (AutoCompleteTextView) findViewById(R.id.measured);
         imgDate=(ImageView) findViewById(R.id.dateImgBS);
         imgTime=(ImageView) findViewById(R.id.timeImgBS);
@@ -83,7 +84,7 @@ public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDi
         });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("BloodPressure").child(FirebaseAuth.getInstance().getUid()).push();
+        myRef = database.getReference("BloodSugar").child(FirebaseAuth.getInstance().getUid()).push();
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButtonSA);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -96,25 +97,29 @@ public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDi
                 bloodSugar.setTime(time.getText().toString());
                 bloodSugar.setNotes(notes.getText().toString().trim());
                 bloodSugar.setTag(tags.getText().toString().trim());
-                myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(bloodSugar).addOnSuccessListener(new OnSuccessListener<Void>() {
+                myRef.setValue(bloodSugar).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         finish();
                     }
                 });
-                Intent at = new Intent(BloodSugarAddPage.this, BloodSugarActivity.class);
-                startActivity(at);
             }
         });
     }
 
     @Override
     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+        Calendar c =Calendar.getInstance();
+        c.set(Calendar.YEAR,i);
+        c.set(Calendar.MONTH,i1);
+        //c.set(Calendar.DAY_OF_MONTH,i2);
+        String currentDatePicker = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(c.getTime());
+        date.setText(currentDatePicker);
 
     }
 
     @Override
     public void onTimeSet(TimePicker timePicker, int i, int i1) {
-
+        time.setText(""+i+":"+i1);
     }
 }

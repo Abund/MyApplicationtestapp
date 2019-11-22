@@ -1,16 +1,23 @@
 package com.example.myapplicationtestapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.myapplicationtestapp.fragments.DatePickerFragment;
 import com.example.myapplicationtestapp.model.Medication;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -18,18 +25,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
-public class MedicationAddPage extends AppCompatActivity {
+public class MedicationAddPage extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
-    private EditText medicationName,EndDate,notes;
-    private AutoCompleteTextView instructionMedi,repeat,pills,unitsMd;
+    private EditText medicationName,notes;
+    private AutoCompleteTextView instructionMedi,repeat,pills,unitsMd,EndDate;
     private DatabaseReference myRef;
     private TextView startDate;
-    Date start;
-    Date end;
+    private ImageView medImageDrop,medImageUnitDrop,medImageEndDateDrop;
     private static final String[] meas=new String[]{"Before food","After food","With food","No matter"};
     private static final String[] meas1=new String[]{"pill","gm","mg","ml","pieces","tablet","units","strips","tablespoon","drops","mcg","cream","carton","spray"};
     private static final String[] meas2=new String[]{"Number of days","Continuous",};
@@ -48,11 +56,49 @@ public class MedicationAddPage extends AppCompatActivity {
         repeat= (AutoCompleteTextView) findViewById(R.id.repeat);
         pills= (AutoCompleteTextView) findViewById(R.id.pills);
         unitsMd= (AutoCompleteTextView) findViewById(R.id.unitsMd);
+        medImageDrop= (ImageView) findViewById(R.id.medImageDrop);
+        medImageUnitDrop= (ImageView) findViewById(R.id.medImageUnitDrop);
+        medImageEndDateDrop= (ImageView) findViewById(R.id.medImageEndDateDrop);
+
         ArrayAdapter<String> com=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas);
         ArrayAdapter<String> com1=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas1);
         ArrayAdapter<String> com2=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas2);
         instructionMedi.setAdapter(com);
         instructionMedi.setThreshold(0);
+
+        pills.setAdapter(com1);
+        pills.setThreshold(0);
+
+        EndDate.setAdapter(com);
+        EndDate.setThreshold(0);
+
+        medImageDrop.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                instructionMedi.showDropDown();
+            }
+        });
+
+        medImageUnitDrop.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                pills.showDropDown();
+            }
+        });
+        medImageEndDateDrop.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                EndDate.showDropDown();
+            }
+        });
+
+        startDate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getSupportFragmentManager(),"date picker");
+            }
+        });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Medication");
@@ -61,23 +107,16 @@ public class MedicationAddPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-                try {
-                    start = sdf.parse(startDate.getText().toString());
-                    end = sdf.parse(EndDate.getText().toString());
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
 
                 Medication medication = new Medication();
-                medication.setEndDate(end);
+                medication.setEndDate(EndDate.getText().toString());
                 medication.setInstructions(instructionMedi.getText().toString());
                 medication.setMedicationName(medicationName.getText().toString());
                 medication.setNotes(notes.getText().toString());
                 medication.setNumberOfDays(unitsMd.getText().toString());
                 medication.setRepeats(repeat.getText().toString());
                 medication.setUnits(pills.getText().toString());
-                medication.setStarteDate(start);
+                medication.setStarteDate(startDate.getText().toString());
 
                 myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(medication).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -89,5 +128,20 @@ public class MedicationAddPage extends AppCompatActivity {
                 startActivity(at);
             }
         });
+    }
+
+    @Override
+    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+        Calendar c =Calendar.getInstance();
+        c.set(Calendar.YEAR,i);
+        c.set(Calendar.MONTH,i1);
+        //c.set(Calendar.DAY_OF_MONTH,i2);
+        String currentDatePicker = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(c.getTime());
+        startDate.setText(currentDatePicker);
+    }
+
+    @Override
+    public void onTimeSet(TimePicker timePicker, int i, int i1) {
+
     }
 }
