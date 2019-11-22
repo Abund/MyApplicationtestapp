@@ -70,11 +70,10 @@ public class BloodpressureActivity extends Fragment {
         myRefOnline.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.getChildrenCount() == 0){
-                    return;
-                }
-
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+                    if (dataSnapshot.getChildrenCount() == 0){
+                        return;
+                    }
                     BloodPressure bloodPressure = dataSnapshot1.getValue(BloodPressure.class);
                     data.add(bloodPressure);
                 }
@@ -84,7 +83,7 @@ public class BloodpressureActivity extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
 //        myRef.addValueEventListener(new ValueEventListener() {
@@ -141,7 +140,7 @@ public class BloodpressureActivity extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("HealthCare ");
+        getActivity().setTitle("HealthCare");
     }
 
     @Override

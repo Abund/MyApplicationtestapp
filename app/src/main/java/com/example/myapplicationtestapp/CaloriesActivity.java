@@ -23,6 +23,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -61,12 +62,15 @@ public class CaloriesActivity extends Fragment {
         data = new ArrayList<Calorie>();
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
-        myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
+        myRef = FirebaseDatabase.getInstance().getReference().child("Calories").child(FirebaseAuth.getInstance().getUid());
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+                    if (dataSnapshot.getChildrenCount() == 0){
+                        return;
+                    }
                     Calorie calorie = dataSnapshot1.getValue(Calorie.class);
                     data.add(calorie);
                 }

@@ -55,8 +55,7 @@ public class GoalAddPage extends AppCompatActivity {
                     @Override public void onCancelled(DatabaseError databaseError) {
 
                     }});
-                Intent at = new Intent(GoalAddPage.this, GoalActivity.class);
-                startActivity(at);
+                finish();
             }
         });
     }

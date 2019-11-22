@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.myapplicationtestapp.adapters.GoalAdapter;
 import com.example.myapplicationtestapp.model.Goal;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,12 +53,15 @@ public class GoalActivity extends Fragment {
         data = new ArrayList<Goal>();
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
-        myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure");
+        myRef = FirebaseDatabase.getInstance().getReference().child("goal").child(FirebaseAuth.getInstance().getUid());
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+                    if (dataSnapshot.getChildrenCount() == 0){
+                        return;
+                    }
                     Goal goal = dataSnapshot1.getValue(Goal.class);
                     data.add(goal);
                 }

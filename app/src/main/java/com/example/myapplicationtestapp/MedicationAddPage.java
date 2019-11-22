@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.model.Medication;
@@ -22,11 +24,15 @@ import java.util.Date;
 
 public class MedicationAddPage extends AppCompatActivity {
 
-    private EditText medicationName,startDate,EndDate,notes;
+    private EditText medicationName,EndDate,notes;
     private AutoCompleteTextView instructionMedi,repeat,pills,unitsMd;
     private DatabaseReference myRef;
+    private TextView startDate;
     Date start;
     Date end;
+    private static final String[] meas=new String[]{"Before food","After food","With food","No matter"};
+    private static final String[] meas1=new String[]{"pill","gm","mg","ml","pieces","tablet","units","strips","tablespoon","drops","mcg","cream","carton","spray"};
+    private static final String[] meas2=new String[]{"Number of days","Continuous",};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +41,18 @@ public class MedicationAddPage extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         medicationName= (EditText) findViewById(R.id.medicationName);
-        startDate= (EditText) findViewById(R.id.dateMedi);
-        EndDate= (EditText) findViewById(R.id.endDateMedi);
+        startDate= (TextView) findViewById(R.id.dateMedi);
+        EndDate= (AutoCompleteTextView) findViewById(R.id.endDateMedi);
         notes= (EditText) findViewById(R.id.notesMD);
         instructionMedi= (AutoCompleteTextView) findViewById(R.id.instructionMedi);
         repeat= (AutoCompleteTextView) findViewById(R.id.repeat);
         pills= (AutoCompleteTextView) findViewById(R.id.pills);
         unitsMd= (AutoCompleteTextView) findViewById(R.id.unitsMd);
+        ArrayAdapter<String> com=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas);
+        ArrayAdapter<String> com1=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas1);
+        ArrayAdapter<String> com2=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas2);
+        instructionMedi.setAdapter(com);
+        instructionMedi.setThreshold(0);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Medication");
@@ -71,9 +82,7 @@ public class MedicationAddPage extends AppCompatActivity {
                 myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(medication).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(MedicationAddPage.this,"Medication Added",Toast.LENGTH_SHORT).show();
-                        Intent at = new Intent(MedicationAddPage.this, homescreen.class);
-                        startActivity(at);
+                        finish();
                     }
                 });
                 Intent at = new Intent(MedicationAddPage.this, MedicationDashBoard.class);

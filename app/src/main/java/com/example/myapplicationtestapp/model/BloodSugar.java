@@ -6,9 +6,9 @@ import java.util.Date;
 public class BloodSugar {
 
     private int concentrationSugar;
-    private int measured;
-    private Date date;
-    private Time time;
+    private String measured;
+    private String date;
+    private String time;
     private String notes;
     private String tag;
 
@@ -20,27 +20,27 @@ public class BloodSugar {
         this.concentrationSugar = concentrationSugar;
     }
 
-    public int getMeasured() {
+    public String getMeasured() {
         return measured;
     }
 
-    public void setMeasured(int measured) {
+    public void setMeasured(String measured) {
         this.measured = measured;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
