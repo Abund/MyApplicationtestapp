@@ -177,19 +177,19 @@ public class homescreen extends AppCompatActivity
             replaceFragment(newFragment);
 
         } else if (id == R.id.nav_bsugar) {
-            Fragment newFragment =  new BloodpressureActivity();
+            Fragment newFragment =  new BloodSugarActivity();
             replaceFragment(newFragment);
 
         } else if (id == R.id.nav_calorie) {
-            Fragment newFragment =  new BloodpressureActivity();
+            Fragment newFragment =  new CaloriesActivity();
             replaceFragment(newFragment);
 
         } else if (id == R.id.nav_mreminder) {
-            Fragment newFragment =  new BloodpressureActivity();
+            Fragment newFragment =  new MedicationDashBoard();
             replaceFragment(newFragment);
 
         } else if (id == R.id.nav_goal) {
-            Fragment newFragment =  new BloodpressureActivity();
+            Fragment newFragment =  new GoalActivity();
             replaceFragment(newFragment);
 
         }else if (id == R.id.sign_out) {

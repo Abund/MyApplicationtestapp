@@ -52,7 +52,7 @@ public class CalorieAdapter extends RecyclerView.Adapter<CalorieAdapter.ViewHold
     @Override
     public CalorieAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.bloodcard,parent,false);
+                .inflate(R.layout.goalcard,parent,false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }

@@ -30,6 +30,7 @@
                     android:scaleX="1.2"
                     android:scaleType="fitXY"
                     android:scaleY="1.2"
+                    android:src="@drawable/bsicon2"
                     />
             </LinearLayout>
             <LinearLayout

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class GoalAdapter extends RecyclerView.Adapter<GoalAdapter.ViewHolder> {
 
-
     private ArrayList<String> mData;
     private ArrayList<Goal> Data;
     private Context ct1;

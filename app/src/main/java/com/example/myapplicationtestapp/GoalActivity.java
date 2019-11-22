@@ -53,7 +53,7 @@ public class GoalActivity extends Fragment {
         data = new ArrayList<Goal>();
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
-        myRef = FirebaseDatabase.getInstance().getReference().child("goal").child(FirebaseAuth.getInstance().getUid());
+        myRef = FirebaseDatabase.getInstance().getReference().child("goal");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

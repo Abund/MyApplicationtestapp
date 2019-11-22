@@ -101,7 +101,7 @@ public class MedicationAddPage extends AppCompatActivity implements DatePickerDi
         });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Medication");
+        myRef = database.getReference("Medication").child(FirebaseAuth.getInstance().getUid()).push();
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButtonMAD);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -118,14 +118,12 @@ public class MedicationAddPage extends AppCompatActivity implements DatePickerDi
                 medication.setUnits(pills.getText().toString());
                 medication.setStarteDate(startDate.getText().toString());
 
-                myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(medication).addOnSuccessListener(new OnSuccessListener<Void>() {
+                myRef.setValue(medication).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         finish();
                     }
                 });
-                Intent at = new Intent(MedicationAddPage.this, MedicationDashBoard.class);
-                startActivity(at);
             }
         });
     }
