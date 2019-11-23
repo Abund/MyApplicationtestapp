@@ -61,13 +61,16 @@ public class registrationpage extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(email.getText().toString().trim())){
                     email.setError("Email is required");
+                    return;
                 }
                 if(TextUtils.isEmpty(password1)){
                     password.setError("Password is required");
+                    return;
                 }
 
                 if(password1.length()<6){
                     password.setError("Password must be greater than 6 characters long");
+                    return;
                 }
 
                 // register the user in firebase

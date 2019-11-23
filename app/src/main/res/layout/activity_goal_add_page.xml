@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-    <EditText
+    <TextView
         android:id="@+id/calGoalDate"
         android:layout_width="167dp"
         android:layout_height="46dp"
@@ -75,11 +75,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="date"
+        android:hint="Date"
+        android:background="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-    <EditText
+    <TextView
         android:id="@+id/calGoalTime"
         android:layout_width="179dp"
         android:layout_height="47dp"
@@ -87,7 +88,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="63dp"
         android:ems="10"
-        android:inputType="time"
+        android:hint="Time"
+        android:background="@drawable/back"
         app:layout_constraintStart_toEndOf="@+id/calGoalDate"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 

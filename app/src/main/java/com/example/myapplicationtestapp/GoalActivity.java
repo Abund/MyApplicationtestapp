@@ -53,18 +53,18 @@ public class GoalActivity extends Fragment {
         data = new ArrayList<Goal>();
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
-        myRef = FirebaseDatabase.getInstance().getReference().child("goal");
+        myRef = FirebaseDatabase.getInstance().getReference().child("goal").child(FirebaseAuth.getInstance().getUid());
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+                //for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
                     if (dataSnapshot.getChildrenCount() == 0){
                         return;
                     }
-                    Goal goal = dataSnapshot1.getValue(Goal.class);
+                    Goal goal = dataSnapshot.getValue(Goal.class);
                     data.add(goal);
-                }
+                //}
                 goalAdapter = new GoalAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(goalAdapter);
             }

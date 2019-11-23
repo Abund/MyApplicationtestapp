@@ -99,40 +99,41 @@ public class bloodpressureaddpage extends AppCompatActivity implements DatePicke
                 String date1 = date.getText().toString().trim();
                 String time1 = time.getText().toString().trim();
 
-                if(TextUtils.isEmpty(syst)){
+                if(syst.isEmpty()){
                     systolicPressure.setError("Systolic pressure is required");
+                    systolicPressure.requestFocus();
+                    return;
                 }
-                if(TextUtils.isEmpty(diast)){
+                else if(diast.isEmpty()){
                     diastolicPressure.setError("diastolic is required");
+                    diastolicPressure.requestFocus();
+                    return;
                 }
-                if(TextUtils.isEmpty(arm)){
+                else if(arm.isEmpty()){
                     measured.setError("Please enter measured arm");
+                    measured.requestFocus();
+                    return;
                 }
-                if(TextUtils.isEmpty(date1)){
+                else if(date1.isEmpty()){
                     date.setError("Please enter date");
+                    date.requestFocus();
+                    return;
                 }
-                if(TextUtils.isEmpty(time1)){
+                else if(time1.isEmpty()){
                     time.setError("Please enter time");
+                    time.requestFocus();
+                    return;
                 }
-
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-                try {
-                    dob_var = sdf.parse(date.getText().toString());
-//                    str = time.getText().toString();
-//                    DateFormat formatter = new SimpleDateFormat("hh:mm:ss a");
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
 
                 BloodPressure bloodPressure = new BloodPressure();
                 bloodPressure.setDate(date.getText().toString());
+                bloodPressure.setSystolicPressure(Integer.parseInt(systolicPressure.getText().toString()));
                 bloodPressure.setDiastolicPressure(Integer.parseInt(diastolicPressure.getText().toString()));
                 bloodPressure.setMeasuredArm(measured.getText().toString());
                 bloodPressure.setTime(time.getText().toString());
                 bloodPressure.setTag(tags.getText().toString().trim());
                 bloodPressure.setNotes(notes.getText().toString().trim());
-                bloodPressure.setSystolicPressure(Integer.parseInt(systolicPressure.getText().toString()));
+
 
                 myRef.setValue(bloodPressure).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

@@ -90,6 +90,32 @@ public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDi
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String conc =sugarConcentration.getText().toString();
+                String date1 = date.getText().toString().trim();
+                String time1 = time.getText().toString().trim();
+                String arm = measured.getText().toString().trim();
+
+                if(conc.isEmpty()){
+                    sugarConcentration.setError("Sugar Concentration is required");
+                    sugarConcentration.requestFocus();
+                    return;
+                }
+                else if(arm.isEmpty()){
+                    measured.setError("Please enter measured value");
+                    measured.requestFocus();
+                    return;
+                }
+                else if(date1.isEmpty()){
+                    date.setError("Please enter date");
+                    date.requestFocus();
+                    return;
+                }
+                else if(time1.isEmpty()){
+                    time.setError("Please enter time");
+                    time.requestFocus();
+                    return;
+                }
+
                 BloodSugar bloodSugar = new BloodSugar();
                 bloodSugar.setConcentrationSugar(Integer.parseInt(sugarConcentration.getText().toString()));
                 bloodSugar.setDate(date.getText().toString());

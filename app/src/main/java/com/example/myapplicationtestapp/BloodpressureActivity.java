@@ -27,7 +27,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -86,22 +85,6 @@ public class BloodpressureActivity extends Fragment {
                 Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
-//                    BloodPressure bloodPressure = dataSnapshot1.getValue(BloodPressure.class);
-//                    data.add(bloodPressure);
-//                }
-//                bloodpressureadapter = new Bloodpressureadapter(data,getActivity().getBaseContext());
-//                mRecycler.setAdapter(bloodpressureadapter);
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//                Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
         lineChart.setDragEnabled(true);
         lineChart.setScaleEnabled(true);
@@ -114,6 +97,10 @@ public class BloodpressureActivity extends Fragment {
         yValues.add(new Entry(3, 100));
         yValues.add(new Entry(4, 90));
         yValues.add(new Entry(5, 100));
+
+        for(int i =0;i<data.size();i++){
+            yValues.add(new Entry(data.get(i).getDiastolicPressure(), 120));
+        }
 
         LineDataSet set1 = new LineDataSet(yValues, "Data set 1");
         set1.setFillAlpha(110);

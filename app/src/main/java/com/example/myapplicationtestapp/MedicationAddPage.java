@@ -108,6 +108,32 @@ public class MedicationAddPage extends AppCompatActivity implements DatePickerDi
             @Override
             public void onClick(View view) {
 
+                String medicationN= medicationName.getText().toString();
+                String startD = startDate.getText().toString();
+                String instruct = instructionMedi.getText().toString();
+                String reapt = repeat.getText().toString();
+
+                if(medicationN.isEmpty()){
+                    medicationName.setError("Please enter the medication Name");
+                    medicationName.requestFocus();
+                    return;
+                }
+                else if(startD.isEmpty()){
+                    startDate.setError("Please enter the start date");
+                    startDate.requestFocus();
+                    return;
+                }
+                else if(instruct.isEmpty()){
+                    instructionMedi.setError("Please enter the instructions");
+                    instructionMedi.requestFocus();
+                    return;
+                }
+                else if(reapt.isEmpty()){
+                    repeat.setError("Please enter time intervals");
+                    repeat.requestFocus();
+                    return;
+                }
+
                 Medication medication = new Medication();
                 medication.setEndDate(EndDate.getText().toString());
                 medication.setInstructions(instructionMedi.getText().toString());

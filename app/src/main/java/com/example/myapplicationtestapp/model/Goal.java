@@ -3,6 +3,7 @@ package com.example.myapplicationtestapp.model;
 public class Goal {
     private String date;
     private String goal;
+    private String time;
 
     public Goal() {
     }
@@ -26,5 +27,12 @@ public class Goal {
 
     public void setGoal(String goal) {
         this.goal = goal;
+    }
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
