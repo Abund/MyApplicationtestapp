@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import com.example.myapplicationtestapp.model.User;
 
-import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -13,6 +12,7 @@ import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
+import com.facebook.login.LoginManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,7 +37,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class homescreen extends AppCompatActivity
+public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView bloodp,bloods,cal,goal,clientName;
@@ -86,7 +86,7 @@ public class homescreen extends AppCompatActivity
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(homescreen.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeScreen.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -168,7 +168,7 @@ public class homescreen extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-            Intent at = new Intent(homescreen.this, homescreen.class);
+            Intent at = new Intent(HomeScreen.this, HomeScreen.class);
             startActivity(at);
         } else if (id == R.id.nav_bpressure) {
             Fragment newFragment =  new BloodpressureActivity();
@@ -195,8 +195,9 @@ public class homescreen extends AppCompatActivity
         }else if (id == R.id.sign_out) {
 
             firebaseAuth = FirebaseAuth.getInstance();
+            LoginManager.getInstance().logOut();
             firebaseAuth.signOut();
-            Intent at = new Intent(homescreen.this, MainActivity.class);
+            Intent at = new Intent(HomeScreen.this, MainActivity.class);
             startActivity(at);
         }
 

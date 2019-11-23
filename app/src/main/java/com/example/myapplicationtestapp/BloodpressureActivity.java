@@ -115,7 +115,7 @@ public class BloodpressureActivity extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent at = new Intent(getActivity().getBaseContext(), bloodpressureaddpage.class);
+                Intent at = new Intent(getActivity().getBaseContext(), BloodPressureAddPage.class);
                 startActivity(at);
             }
         });

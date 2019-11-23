@@ -99,7 +99,7 @@
         android:background="@color/correctgreen"
         android:drawableLeft="@drawable/google_logo"
         android:text="Sign In with Google"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/facebookLoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -124,10 +124,27 @@
         <!--app:layout_constraintStart_toStartOf="parent"-->
         <!--app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+    <!--<Button-->
+        <!--android:id="@+id/button4"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="33dp"-->
+        <!--android:background="@color/correctgreen"-->
+        <!--android:drawableLeft="@drawable/fb_logo"-->
+        <!--android:text="Sign In with Facebook"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/register"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/googleSignInButton" />-->
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebookLoginButton"
+        android:layout_width="194dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
@@ -139,7 +156,7 @@
         app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/googleSignInButton" />
+        app:layout_constraintTop_toBottomOf="@+id/googleSignInButton"  />
 
 
     <!--<com.shaishavgandhi.loginbuttons.GooglePlusButton-->
@@ -164,7 +181,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/facebookLoginButton" />
 
     <TextView
         android:id="@+id/textView7"

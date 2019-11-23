@@ -115,4 +115,22 @@ public class CaloriesActivity extends Fragment {
         });
         return view;
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //you can set the title for your toolbar here for different fragments different titles
+        getActivity().setTitle("HealthCare");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
+
+    public void onRefresh() {
+        Toast.makeText(getActivity(), "Fragment : Refresh called.",
+                Toast.LENGTH_SHORT).show();
+    }
 }

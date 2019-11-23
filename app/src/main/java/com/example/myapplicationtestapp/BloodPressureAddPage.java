@@ -2,15 +2,10 @@ package com.example.myapplicationtestapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -31,12 +26,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class bloodpressureaddpage extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+public class BloodPressureAddPage extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     private EditText systolicPressure,diastolicPressure,notes,tags;
     private AutoCompleteTextView measured;
@@ -138,15 +131,15 @@ public class bloodpressureaddpage extends AppCompatActivity implements DatePicke
                 myRef.setValue(bloodPressure).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(bloodpressureaddpage.this,"Successful",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BloodPressureAddPage.this,"Successful",Toast.LENGTH_SHORT).show();
                         finish();
 //                        FragmentManager fragmentManager =getSupportFragmentManager();
 //                        fragmentManager.beginTransaction().replace(R.id.pAddPage, new BloodpressureActivity()).commit();
-//                        Intent at = new Intent(bloodpressureaddpage.this, homescreen.class);
+//                        Intent at = new Intent(BloodPressureAddPage.this, HomeScreen.class);
 //                        startActivity(at);
                     }
                 });
-//                Intent at = new Intent(bloodpressureaddpage.this, BloodpressureActivity.class);
+//                Intent at = new Intent(BloodPressureAddPage.this, BloodpressureActivity.class);
 //                startActivity(at);
             }
         });
