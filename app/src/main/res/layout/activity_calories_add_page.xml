@@ -244,6 +244,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/upID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -252,16 +253,19 @@
             android:layout_height="30dp"
             android:text="7up"/>
         <Button
+            android:id="@+id/idInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/idShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/idDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -278,6 +282,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/upBigId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -286,16 +291,19 @@
             android:layout_height="30dp"
             android:text="7up"/>
         <Button
+            android:id="@+id/upBigInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/upBigShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/upBigDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -311,6 +319,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/appleJuice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -319,16 +328,19 @@
             android:layout_height="30dp"
             android:text="Apple Juice"/>
         <Button
+            android:id="@+id/appleJuiceInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/appleJuiceShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/appleJuiceDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -345,6 +357,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/grapeJuice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -353,16 +366,19 @@
             android:layout_height="30dp"
             android:text="Grape Juice"/>
         <Button
+            android:id="@+id/grapeJuiceInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/grapeJuiceShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/grapeJuiceDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -386,6 +402,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/appleId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -394,16 +411,19 @@
             android:layout_height="30dp"
             android:text="Apple"/>
         <Button
+            android:id="@+id/appleInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/appleShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/appleDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -420,6 +440,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/avacadoId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -428,16 +449,19 @@
             android:layout_height="30dp"
             android:text="Avacado"/>
         <Button
+            android:id="@+id/avacadoInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/avacadoShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/avacadoDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -454,6 +478,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/bananaId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -462,16 +487,19 @@
             android:layout_height="30dp"
             android:text="Banana"/>
         <Button
+            android:id="@+id/bananaInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/bananaShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/bananaDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -488,6 +516,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/cherryId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -496,16 +525,19 @@
             android:layout_height="30dp"
             android:text="Cherry"/>
         <Button
+            android:id="@+id/cherryInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/cherryShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/cherryDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -522,6 +554,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/coconutId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -530,16 +563,19 @@
             android:layout_height="30dp"
             android:text="Coconut"/>
         <Button
+            android:id="@+id/coconutInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/coconutShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/coconutDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -563,24 +599,28 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/broId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
             android:layout_width="80dp"
             android:layout_height="30dp"
-            android:text="Broccoli,Raw"/>
+            android:text="Broccoli"/>
         <Button
+            android:id="@+id/broInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/brocShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/brocDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -597,24 +637,28 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/cabbageId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
             android:layout_width="80dp"
             android:layout_height="30dp"
-            android:text="Cabbage,Raw"/>
+            android:text="Cabbage"/>
         <Button
+            android:id="@+id/cabbageInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/cabbageShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/cabbageDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -631,24 +675,28 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/carrotId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
             android:layout_width="80dp"
             android:layout_height="30dp"
-            android:text="Carrot,Raw"/>
+            android:text="Carrot"/>
         <Button
+            android:id="@+id/carrotInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/carrotShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/carrotDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -665,24 +713,28 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/cassavaId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
             android:layout_width="80dp"
             android:layout_height="30dp"
-            android:text="Cassava,Raw"/>
+            android:text="Cassava"/>
         <Button
+            android:id="@+id/cassavaInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/cassavaShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/cassavaDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -699,6 +751,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/gardenId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -707,16 +760,19 @@
             android:layout_height="30dp"
             android:text="Garden egg"/>
         <Button
+            android:id="@+id/gardenInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/gardenShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/gardenDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -740,6 +796,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/beanswhiteId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -748,16 +805,19 @@
             android:layout_height="30dp"
             android:text="Beans White"/>
         <Button
+            android:id="@+id/beanswhiteInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/beanswhiteShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/beanswhiteDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -774,6 +834,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/beansBrownId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -782,16 +843,19 @@
             android:layout_height="30dp"
             android:text="Brown Beans"/>
         <Button
+            android:id="@+id/beansBrownInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/beansBrownShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/beansBrownDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -808,6 +872,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/oatmealId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -816,16 +881,19 @@
             android:layout_height="30dp"
             android:text="Oat meal"/>
         <Button
+            android:id="@+id/oatmealInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/oatmealShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/oatmealDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -842,6 +910,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/riceWhiteId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -850,16 +919,19 @@
             android:layout_height="30dp"
             android:text="Rice white"/>
         <Button
+            android:id="@+id/riceWhiteInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/riceWhiteShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/riceWhiteDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -876,6 +948,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/soyaBeansId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -884,16 +957,19 @@
             android:layout_height="30dp"
             android:text="Soya beans"/>
         <Button
+            android:id="@+id/soyaBeansInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/soyaBeansIdShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/soyaBeansIdDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -917,6 +993,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/almondId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -925,16 +1002,19 @@
             android:layout_height="30dp"
             android:text="Almonds"/>
         <Button
+            android:id="@+id/almondInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/almondShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/almondDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -951,6 +1031,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/cashewId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -959,16 +1040,19 @@
             android:layout_height="30dp"
             android:text="Cashew"/>
         <Button
+            android:id="@+id/cashewInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/cashewShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/cashewDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -985,6 +1069,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/walnutId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -993,16 +1078,19 @@
             android:layout_height="30dp"
             android:text="Walnut"/>
         <Button
+            android:id="@+id/walnutInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/walnutShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/walnutDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1019,6 +1107,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/groundnutId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1027,16 +1116,19 @@
             android:layout_height="30dp"
             android:text="Groundnut"/>
         <Button
+            android:id="@+id/groundnutInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/groundnutShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/groundnutDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1053,6 +1145,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/coco1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1061,16 +1154,19 @@
             android:layout_height="30dp"
             android:text="Coconut"/>
         <Button
+            android:id="@+id/cocoInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/cocoShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/cocoDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1094,6 +1190,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/butterId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1102,16 +1199,19 @@
             android:layout_height="30dp"
             android:text="Butter"/>
         <Button
+            android:id="@+id/butterInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/butterShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/butterDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1128,6 +1228,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/KetchupId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1136,16 +1237,19 @@
             android:layout_height="30dp"
             android:text="Ketchup"/>
         <Button
+            android:id="@+id/KetchupInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/KetchupShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/KetchupDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1162,6 +1266,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/MargirineId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1170,16 +1275,19 @@
             android:layout_height="30dp"
             android:text="Margirine"/>
         <Button
+            android:id="@+id/MargirineInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/MargirineShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/MargirineDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1196,6 +1304,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/MayonaiseId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1204,16 +1313,19 @@
             android:layout_height="30dp"
             android:text="Mayonaise"/>
         <Button
+            android:id="@+id/MayonaiseInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/MayonaiseShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/MayonaiseDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
@@ -1230,6 +1342,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/PeanutId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
@@ -1238,16 +1351,19 @@
             android:layout_height="30dp"
             android:text="Peanut butter"/>
         <Button
+            android:id="@+id/PeanutInc"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="+"/>
 
         <TextView
+            android:id="@+id/PeanutShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
         <Button
+            android:id="@+id/PeanutDec"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:text="-"/>
