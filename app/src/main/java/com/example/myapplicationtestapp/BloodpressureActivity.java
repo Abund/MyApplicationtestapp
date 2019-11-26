@@ -11,12 +11,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.Bloodpressureadapter;
 import com.example.myapplicationtestapp.model.BloodPressure;
 
+import com.example.myapplicationtestapp.popups.BloodPressurePopUp;
+import com.example.myapplicationtestapp.popups.BloodSugarPopUp;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.LimitLine;
@@ -53,6 +56,7 @@ public class BloodpressureActivity extends Fragment {
     View view;
     private DatabaseReference myRefOnline;
     private TextView alternate;
+    private Button suggestionBP;
 
     @Nullable
     @Override
@@ -63,6 +67,7 @@ public class BloodpressureActivity extends Fragment {
         lineChart = (LineChart) view.findViewById(R.id.lineChart);
         mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewBP);
         alternate = (TextView) view.findViewById(R.id.alternate);
+        suggestionBP =(Button) view.findViewById(R.id.suggestionBP);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
         data = new ArrayList<BloodPressure>();
@@ -108,6 +113,13 @@ public class BloodpressureActivity extends Fragment {
             public void onClick(View view) {
                 Intent at = new Intent(getActivity().getBaseContext(), BloodPressureAddPage.class);
                 startActivity(at);
+            }
+        });
+
+        suggestionBP.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity().getBaseContext(), BloodPressurePopUp.class));
             }
         });
         return view;
