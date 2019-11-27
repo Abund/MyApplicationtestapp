@@ -286,9 +286,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                 if(i>0){
                  i--;
                 }else {
-
                 }
-
                 beerShow.setText(""+i);
             }
         });
@@ -303,6 +301,446 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     calorieAmount+=amount*100;
                     //get the name of the component associated with the calories
                     comp1.append("Name:"+beerName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForRedWine.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(redWineShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+redWineName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForSpirit.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(spiritShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+spiritName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForWhiteWine.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(whitewineShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+whitewineName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxFor7up50.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(up50beerShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+up50Name.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxFor7up35.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(up35Show.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+up35Name.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForAppleJuice.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(appleJuiceShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+appleJuiceName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForGrapeJuice.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(grapeJuiceShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+grapeJuiceName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForApple.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(appleShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+appleName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForAvacardo.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(avacardoShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+avacardoName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForBanana.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(bananaShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+bananaName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCherry.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(cherryShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+cherryName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCoconut.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(coconutShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+coconutName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForBroccoli.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(broccoliShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+broccoliName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCabbage.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(cabbageShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+cabbageName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCarrot.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(carrotShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+carrotName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCassava.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(cassavaShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+cassavaName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForGardenEgg.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(gardenEggShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+gardenEggName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForWhiteBeans.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(whiteBeansShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+whiteBeansName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForBrownBeans.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(brownBeansShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+brownBeansName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForOatMeal.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(oatMealShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+oatMealName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForWhiteRice.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(riceWhiteShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+riceWhiteName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForSoyaBeans.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(soyaBeansShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+soyaBeansName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForAlmonds.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(almondsShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+almondsName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCashew.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(cashewShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+cashewName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForWalnut.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(walnutShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+walnutName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForGroundNut.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(groundnutShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+groundnutName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForCoco.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(cocoShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+cocoName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForKetchup.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(ketchupShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+ketchupName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForMargirine.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(margirineShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+margirineName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForMayoniase.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(mayoniaseShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+mayoniaseName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForPeanut.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(PeanutShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+PeanutName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForHoney.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(honeyShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+honeyName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForRaisin.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(raisinShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+raisinName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForSugar.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(sugarShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+sugarName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForSugarGranulated.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(sugarGranulatedShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+sugarGranulatedName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForcupCake.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(cupCakeShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+cupCakeName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForGala.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(GalaShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+GalaName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForIceCream1.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(iceCreamShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+iceCreamName.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForiceCream2.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(iceCream2Show.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+iceCream2Name.getText().toString());
+                    comp1.append(",Amount:" + amount + ",");
+                    comp1.append("Calories:" + calorieAmount + ".");
+                }
+
+                if(checkBoxForSamosa.isChecked()){
+                    //get amount from the counter
+                    int amount=Integer.parseInt(samosaShow.getText().toString());
+                    //multiply amount by the calories
+                    calorieAmount+=amount*100;
+                    //get the name of the component associated with the calories
+                    comp1.append("Name:"+samosaName.getText().toString());
                     comp1.append(",Amount:" + amount + ",");
                     comp1.append("Calories:" + calorieAmount + ".");
                 }
