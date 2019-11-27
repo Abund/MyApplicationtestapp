@@ -48,7 +48,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
     ///redwine
     private CheckBox checkBoxForRedWine;
     private Button incrementorForRedWine,decrementorForRedWine;
-    private TextView redWineShow,redWineName;
+    private TextView redWineShow,redWineName1;
     ///spirit
     private CheckBox checkBoxForSpirit;
     private Button incrementorForSpirit,decrementorForSpirit;
