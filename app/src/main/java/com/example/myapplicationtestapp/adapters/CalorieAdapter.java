@@ -61,7 +61,7 @@ public class CalorieAdapter extends RecyclerView.Adapter<CalorieAdapter.ViewHold
     public void onBindViewHolder(final CalorieAdapter.ViewHolder holder, final int position) {
         holder.date.setText(Data.get(position).getDate()+"");
         holder.time.setText(Data.get(position).getTime()+"");
-        holder.timeType.setText(Data.get(position).getTimeType()+"");
+        holder.timeType.setText(Data.get(position).getFoodType()+"");
         holder.calorieUnits.setText(Data.get(position).getCalorieUnits()+"");
 
     }

@@ -2,9 +2,27 @@ package com.example.myapplicationtestapp.model;
 
 public class Calorie {
     private String time;
-    private String timeType;
+    private String foodType;
     private String calorieUnits;
     private String date;
+    private String foodName;
+    private String foodContent;
+
+    public String getFoodContent() {
+        return foodContent;
+    }
+
+    public void setFoodContent(String foodContent) {
+        this.foodContent = foodContent;
+    }
+
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
 
     public String getTime() {
         return time;
@@ -14,12 +32,12 @@ public class Calorie {
         this.time = time;
     }
 
-    public String getTimeType() {
-        return timeType;
+    public String getFoodType() {
+        return foodType;
     }
 
-    public void setTimeType(String timeType) {
-        this.timeType = timeType;
+    public void setFoodType(String timeType) {
+        this.foodType = timeType;
     }
 
     public String getCalorieUnits() {

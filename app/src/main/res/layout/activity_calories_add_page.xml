@@ -19,9 +19,9 @@
         android:layout_height="30dp"
         android:text="Name"/>
     <EditText
-        android:id="@+id/foodNAme"
+        android:id="@+id/foodName"
         android:layout_width="158dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"/>
 
@@ -93,6 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/beerName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Beer"/>
@@ -103,8 +104,10 @@
             android:text="+"/>
 
         <TextView
+            android:id="@+id/beerShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -1734,6 +1737,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/calSubmit"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:layout_width="wrap_content"
