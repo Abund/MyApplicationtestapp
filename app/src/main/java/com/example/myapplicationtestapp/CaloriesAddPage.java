@@ -232,18 +232,19 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         setContentView(R.layout.activity_calories_add_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+
         submit =(Button) findViewById(R.id.calSubmit);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
         time= (TextView) findViewById(R.id.timeCA);
         date= (TextView) findViewById(R.id.dateCA);
         foodName= (TextView) findViewById(R.id.foodName);
         foodType= (TextView) findViewById(R.id.foodType);
 
         //Alcoholic Beverages
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
         //Drinks and Juice
         //fruits
         //vegetables
