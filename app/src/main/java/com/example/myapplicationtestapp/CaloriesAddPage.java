@@ -240,19 +240,274 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         foodType= (TextView) findViewById(R.id.foodType);
 
         //Alcoholic Beverages
+        ///beer
         beerShow =(TextView) findViewById(R.id.beerShow);
         incrementorForBeer =(Button) findViewById(R.id.beerInc);
         decrementorForBeer =(Button) findViewById(R.id.beerDec);
         checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
         beerName=(TextView) findViewById(R.id.beerName);
+        ///redwine
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///spirit
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///whitewine
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //Drinks and Juice
+        ///7up50
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///7up35
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///Apple Juice
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///Grape Juice
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //fruits
+        ///apple
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///avacardo
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///banana
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///cherry
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///coconut
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //vegetables
+        ///broccoli
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///cabbage
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///carrot
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///cassava
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///garden egg
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //Grains and legumes
+        ///whiteBeans
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///brown beans
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///Oat meal
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///rice white
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///soya beans
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //Nuts
+        ///Almonds
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///cashew
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///walnut
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///groundnut
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///coco
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //spreads
+        ///butter
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///ketchup
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///Margirine
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///Mayoniase
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///peanut
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //sweeterners
+        ///honey
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///raisin
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///sugar
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///sugarGranulated
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+
         //snacks
+        ///cupCake
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///gala
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///iceCream
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///iceCream
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
+        ///samosa
+        beerShow =(TextView) findViewById(R.id.beerShow);
+        incrementorForBeer =(Button) findViewById(R.id.beerInc);
+        decrementorForBeer =(Button) findViewById(R.id.beerDec);
+        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
+        beerName=(TextView) findViewById(R.id.beerName);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Calorie").child(FirebaseAuth.getInstance().getUid()).push();
@@ -273,6 +528,8 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             }
         });
 
+        //Alcoholic Beverages
+        ///beer
         incrementorForBeer.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -280,7 +537,6 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                 beerShow.setText(""+i);
             }
         });
-
         decrementorForBeer.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -289,6 +545,769 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                 }else {
                 }
                 beerShow.setText(""+i);
+            }
+        });
+        ///redwine
+        incrementorForRedWine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                redWineShow.setText(""+i);
+            }
+        });
+        decrementorForRedWine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                redWineShow.setText(""+i);
+            }
+        });
+        ///spirit
+        incrementorForSpirit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                spiritShow.setText(""+i);
+            }
+        });
+        decrementorForSpirit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                spiritShow.setText(""+i);
+            }
+        });
+        ///whitewine
+        incrementorForWhiteWine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                whitewineShow.setText(""+i);
+            }
+        });
+        decrementorForWhiteWine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                whitewineShow.setText(""+i);
+            }
+        });
+
+        //Drinks and Juice
+        ///7up50
+        incrementorFor7up50.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                up50beerShow.setText(""+i);
+            }
+        });
+        decrementorFor7up50.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                up50beerShow.setText(""+i);
+            }
+        });
+        ///7up35
+        incrementorFor7up35.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                up35Show.setText(""+i);
+            }
+        });
+        decrementorFor7up35.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                up35Show.setText(""+i);
+            }
+        });
+        ///Apple Juice
+        incrementorForAppleJuice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                appleJuiceShow.setText(""+i);
+            }
+        });
+        decrementorForAppleJuice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                appleJuiceShow.setText(""+i);
+            }
+        });
+        ///Grape Juice
+        incrementorForGrapeJuice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                grapeJuiceShow.setText(""+i);
+            }
+        });
+        decrementorForGrapeJuice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                grapeJuiceShow.setText(""+i);
+            }
+        });
+
+
+        //fruits
+        ///apple
+        incrementorForApple.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                appleShow.setText(""+i);
+            }
+        });
+
+        decrementorForApple.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                appleShow.setText(""+i);
+            }
+        });
+        ///avacardo
+        incrementorForAvacardo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                avacardoShow.setText(""+i);
+            }
+        });
+        decrementorForAvacardo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                avacardoShow.setText(""+i);
+            }
+        });
+        ///banana
+        incrementorForBanana.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                bananaShow.setText(""+i);
+            }
+        });
+        decrementorForBanana.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                bananaShow.setText(""+i);
+            }
+        });
+        ///cherry
+        incrementorForCherry.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                cherryShow.setText(""+i);
+            }
+        });
+        decrementorForCherry.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                cherryShow.setText(""+i);
+            }
+        });
+        ///coconut
+        incrementorForCoconut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                coconutShow.setText(""+i);
+            }
+        });
+        decrementorForCoconut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                coconutShow.setText(""+i);
+            }
+        });
+
+
+        //vegetables
+        ///broccoli
+        incrementorForBroccoli.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                broccoliShow.setText(""+i);
+            }
+        });
+
+        decrementorForBroccoli.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                broccoliShow.setText(""+i);
+            }
+        });
+        ///cabbage
+        incrementorForCabbage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                cabbageShow.setText(""+i);
+            }
+        });
+        decrementorForCabbage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                cabbageShow.setText(""+i);
+            }
+        });
+        ///carrot
+        incrementorForCarrot.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                carrotShow.setText(""+i);
+            }
+        });
+        decrementorForCarrot.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                carrotShow.setText(""+i);
+            }
+        });
+        ///cassava
+        incrementorForCassava.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                cassavaShow.setText(""+i);
+            }
+        });
+        decrementorForCassava.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                cassavaShow.setText(""+i);
+            }
+        });
+        ///garden egg
+        incrementorForGardenEgg.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                gardenEggShow.setText(""+i);
+            }
+        });
+        decrementorForGardenEgg.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                gardenEggShow.setText(""+i);
+            }
+        });
+
+
+        //Grains and legumes
+        ///whiteBeans
+        incrementorForWhiteBeans.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                whiteBeansShow.setText(""+i);
+            }
+        });
+        decrementorForWhiteBeans.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                whiteBeansShow.setText(""+i);
+            }
+        });
+        ///brown beans
+        incrementorForBrownBeans.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                brownBeansShow.setText(""+i);
+            }
+        });
+        decrementorForBrownBeans.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                brownBeansShow.setText(""+i);
+            }
+        });
+        ///Oat meal
+        incrementorForOatMeal.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                oatMealShow.setText(""+i);
+            }
+        });
+        decrementorForOatMeal.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                oatMealShow.setText(""+i);
+            }
+        });
+        ///rice white
+        incrementorForWhiteRice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                riceWhiteShow.setText(""+i);
+            }
+        });
+        decrementorForWhiteRice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                riceWhiteShow.setText(""+i);
+            }
+        });
+        ///soya beans
+        incrementorForSoyaBeans.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                soyaBeansShow.setText(""+i);
+            }
+        });
+        decrementorForSoyaBeans.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                soyaBeansShow.setText(""+i);
+            }
+        });
+
+
+        //Nuts
+        ///Almonds
+        incrementorForAlmonds.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                almondsShow.setText(""+i);
+            }
+        });
+
+        decrementorForAlmonds.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                almondsShow.setText(""+i);
+            }
+        });
+        ///cashew
+        incrementorForCashew.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                cashewShow.setText(""+i);
+            }
+        });
+        decrementorForCashew.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                cashewShow.setText(""+i);
+            }
+        });
+        ///walnut
+        incrementorForWalnut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                walnutShow.setText(""+i);
+            }
+        });
+        decrementorForWalnut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                walnutShow.setText(""+i);
+            }
+        });
+        ///groundnut
+        incrementorForGroundNut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                groundnutShow.setText(""+i);
+            }
+        });
+        decrementorForGroundNut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                groundnutShow.setText(""+i);
+            }
+        });
+        ///coco
+        incrementorForCoco.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                cocoShow.setText(""+i);
+            }
+        });
+        decrementorForCoco.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                cocoShow.setText(""+i);
+            }
+        });
+
+        //spreads
+        ///butter
+        incrementorForButter.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                butterShow.setText(""+i);
+            }
+        });
+        decrementorForButter.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                butterShow.setText(""+i);
+            }
+        });
+        ///ketchup
+        incrementorForKetchup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                ketchupShow.setText(""+i);
+            }
+        });
+        decrementorForKetchup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                ketchupShow.setText(""+i);
+            }
+        });
+        ///Margirine
+        incrementorForMargirine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                margirineShow.setText(""+i);
+            }
+        });
+        decrementorForMargirine.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                margirineShow.setText(""+i);
+            }
+        });
+        ///Mayoniase
+        incrementorForMayoniase.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                mayoniaseShow.setText(""+i);
+            }
+        });
+        decrementorForMayoniase.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                mayoniaseShow.setText(""+i);
+            }
+        });
+        ///peanut
+        incrementorForPeanut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                PeanutShow.setText(""+i);
+            }
+        });
+        decrementorForPeanut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                PeanutShow.setText(""+i);
+            }
+        });
+
+
+        //sweeterners
+        ///honey
+        incrementorForHoney.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                honeyShow.setText(""+i);
+            }
+        });
+        decrementorForHoney.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                honeyShow.setText(""+i);
+            }
+        });
+        ///raisin
+        incrementorForRaisin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                raisinShow.setText(""+i);
+            }
+        });
+        decrementorForRaisin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                raisinShow.setText(""+i);
+            }
+        });
+        ///sugar
+        incrementorForSugar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                sugarShow.setText(""+i);
+            }
+        });
+        decrementorForSugar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                sugarShow.setText(""+i);
+            }
+        });
+        ///sugarGranulated
+        incrementorForSugarGranulated.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                sugarGranulatedShow.setText(""+i);
+            }
+        });
+        decrementorForSugarGranulated.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                sugarGranulatedShow.setText(""+i);
+            }
+        });
+
+
+        //snacks
+        ///cupCake
+        incrementorForcupCake.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                cupCakeShow.setText(""+i);
+            }
+        });
+        decrementorForcupCake.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                cupCakeShow.setText(""+i);
+            }
+        });
+        ///gala
+        incrementorForGala.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                GalaShow.setText(""+i);
+            }
+        });
+        decrementorForGala.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                GalaShow.setText(""+i);
+            }
+        });
+        ///iceCream
+        incrementorForIceCream.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                iceCreamShow.setText(""+i);
+            }
+        });
+        decrementorForIceCream1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                iceCreamShow.setText(""+i);
+            }
+        });
+        ///iceCream
+        incrementorForiceCream2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                iceCream2Show.setText(""+i);
+            }
+        });
+        decrementorForiceCream2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                iceCream2Show.setText(""+i);
+            }
+        });
+        ///samosa
+        incrementorForSamosa.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                i++;
+                samosaShow.setText(""+i);
+            }
+        });
+        decrementorForSamosa.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(i>0){
+                    i--;
+                }else {
+                }
+                samosaShow.setText(""+i);
             }
         });
 
