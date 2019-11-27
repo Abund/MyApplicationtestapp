@@ -48,7 +48,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
     ///redwine
     private CheckBox checkBoxForRedWine;
     private Button incrementorForRedWine,decrementorForRedWine;
-    private TextView redWineShow,redWineName1;
+    private TextView redWineShow,redWineName;
     ///spirit
     private CheckBox checkBoxForSpirit;
     private Button incrementorForSpirit,decrementorForSpirit;
@@ -59,14 +59,172 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
     private TextView whitewineShow,whitewineName;
 
     //Drinks and Juice
+    ///7up50
+    private CheckBox checkBoxFor7up50;
+    private Button incrementorFor7up50,decrementorFor7up50;
+    private TextView up50beerShow,up50Name;
+    ///7up35
+    private CheckBox checkBoxFor7up35;
+    private Button incrementorFor7up35,decrementorFor7up35;
+    private TextView up35Show,up35Name;
+    ///Apple Juice
+    private CheckBox checkBoxForAppleJuice;
+    private Button incrementorForAppleJuice,decrementorForAppleJuice;
+    private TextView appleJuiceShow,appleJuiceName;
+    ///Grape Juice
+    private CheckBox checkBoxForGrapeJuice;
+    private Button incrementorForGrapeJuice,decrementorForGrapeJuice;
+    private TextView grapeJuiceShow,grapeJuiceName;
 
     //fruits
+    ///apple
+    private CheckBox checkBoxForApple;
+    private Button incrementorForApple,decrementorForApple;
+    private TextView appleShow,appleName;
+    ///avacardo
+    private CheckBox checkBoxForAvacardo;
+    private Button incrementorForAvacardo,decrementorForAvacardo;
+    private TextView avacardoShow,avacardoName;
+    ///banana
+    private CheckBox checkBoxForBanana;
+    private Button incrementorForBanana,decrementorForBanana;
+    private TextView bananaShow,bananaName;
+    ///cherry
+    private CheckBox checkBoxForCherry;
+    private Button incrementorForCherry,decrementorForCherry;
+    private TextView cherryShow,cherryName;
+    ///coconut
+    private CheckBox checkBoxForCoconut;
+    private Button incrementorForCoconut,decrementorForCoconut;
+    private TextView coconutShow,coconutName;
+
     //vegetables
+    ///broccoli
+    private CheckBox checkBoxForBroccoli;
+    private Button incrementorForBroccoli,decrementorForBroccoli;
+    private TextView broccoliShow,broccoliName;
+    ///cabbage
+    private CheckBox checkBoxForCabbage;
+    private Button incrementorForCabbage,decrementorForCabbage;
+    private TextView cabbageShow,cabbageName;
+    ///carrot
+    private CheckBox checkBoxForCarrot;
+    private Button incrementorForCarrot,decrementorForCarrot;
+    private TextView carrotShow,carrotName;
+    ///cassava
+    private CheckBox checkBoxForCassava;
+    private Button incrementorForCassava,decrementorForCassava;
+    private TextView cassavaShow,cassavaName;
+    ///garden egg
+    private CheckBox checkBoxForGardenEgg;
+    private Button incrementorForGardenEgg,decrementorForGardenEgg;
+    private TextView gardenEggShow,gardenEggName;
+
     //Grains and legumes
+    ///whiteBeans
+    private CheckBox checkBoxForWhiteBeans;
+    private Button incrementorForWhiteBeans,decrementorForWhiteBeans;
+    private TextView whiteBeansShow,whiteBeansName;
+    ///brown beans
+    private CheckBox checkBoxForBrownBeans;
+    private Button incrementorForBrownBeans,decrementorForBrownBeans;
+    private TextView brownBeansShow,brownBeansName;
+    ///Oat meal
+    private CheckBox checkBoxForOatMeal;
+    private Button incrementorForOatMeal,decrementorForOatMeal;
+    private TextView oatMealShow,oatMealName;
+    ///rice white
+    private CheckBox checkBoxForWhiteRice;
+    private Button incrementorForWhiteRice,decrementorForWhiteRice;
+    private TextView riceWhiteShow,riceWhiteName;
+    ///soya beans
+    private CheckBox checkBoxForSoyaBeans;
+    private Button incrementorForSoyaBeans,decrementorForSoyaBeans;
+    private TextView soyaBeansShow,soyaBeansName;
+
     //Nuts
+    ///Almonds
+    private CheckBox checkBoxForAlmonds;
+    private Button incrementorForAlmonds,decrementorForAlmonds;
+    private TextView almondsShow,almondsName;
+    ///cashew
+    private CheckBox checkBoxForCashew;
+    private Button incrementorForCashew,decrementorForCashew;
+    private TextView cashewShow,cashewName;
+    ///walnut
+    private CheckBox checkBoxForWalnut;
+    private Button incrementorForWalnut,decrementorForWalnut;
+    private TextView walnutShow,walnutName;
+    ///groundnut
+    private CheckBox checkBoxForGroundNut;
+    private Button incrementorForGroundNut,decrementorForGroundNut;
+    private TextView groundnutShow,groundnutName;
+    ///coco
+    private CheckBox checkBoxForCoco;
+    private Button incrementorForCoco,decrementorForCoco;
+    private TextView cocoShow,cocoName;
+
     //spreads
+    ///butter
+    private CheckBox checkBoxForButter;
+    private Button incrementorForButter,decrementorForButter;
+    private TextView butterShow,butterName;
+    ///ketchup
+    private CheckBox checkBoxForKetchup;
+    private Button incrementorForKetchup,decrementorForKetchup;
+    private TextView ketchupShow,ketchupName;
+    ///Margirine
+    private CheckBox checkBoxForMargirine;
+    private Button incrementorForMargirine,decrementorForMargirine;
+    private TextView margirineShow,margirineName;
+    ///Mayoniase
+    private CheckBox checkBoxForMayoniase;
+    private Button incrementorForMayoniase,decrementorForMayoniase;
+    private TextView mayoniaseShow,mayoniaseName;
+    ///peanut
+    private CheckBox checkBoxForPeanut;
+    private Button incrementorForPeanut,decrementorForPeanut;
+    private TextView PeanutShow,PeanutName;
+
     //sweeterners
+    ///honey
+    private CheckBox checkBoxForHoney;
+    private Button incrementorForHoney,decrementorForHoney;
+    private TextView honeyShow,honeyName;
+    ///raisin
+    private CheckBox checkBoxForRaisin;
+    private Button incrementorForRaisin,decrementorForRaisin;
+    private TextView raisinShow,raisinName;
+    ///sugar
+    private CheckBox checkBoxForSugar;
+    private Button incrementorForSugar,decrementorForSugar;
+    private TextView sugarShow,sugarName;
+    ///sugarGranulated
+    private CheckBox checkBoxForSugarGranulated;
+    private Button incrementorForSugarGranulated,decrementorForSugarGranulated;
+    private TextView sugarGranulatedShow,sugarGranulatedName;
+
     //snacks
+    ///cupCake
+    private CheckBox checkBoxForcupCake;
+    private Button incrementorForcupCake,decrementorForcupCake;
+    private TextView cupCakeShow,cupCakeName;
+    ///gala
+    private CheckBox checkBoxForGala;
+    private Button incrementorForGala,decrementorForGala;
+    private TextView GalaShow,GalaName;
+    ///iceCream
+    private CheckBox checkBoxForIceCream1;
+    private Button incrementorForIceCream,decrementorForIceCream1;
+    private TextView iceCreamShow,iceCreamName;
+    ///iceCream
+    private CheckBox checkBoxForiceCream2;
+    private Button incrementorForiceCream2,decrementorForiceCream2;
+    private TextView iceCream2Show,iceCream2Name;
+    ///samosa
+    private CheckBox checkBoxForSamosa;
+    private Button incrementorForSamosa,decrementorForSamosa;
+    private TextView samosaShow,samosaName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
