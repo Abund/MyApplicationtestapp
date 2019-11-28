@@ -50,11 +50,6 @@ public class CaloriesActivity extends Fragment {
     private Button suggestion;
     View view;
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_calories);
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater , ViewGroup container, Bundle savedInstanceState) {
@@ -106,7 +101,6 @@ public class CaloriesActivity extends Fragment {
 
             @Override
             public void onClick(View view) {
-
                 startActivity(new Intent(getActivity().getBaseContext(), CaloriePopUp.class));
             }
         });

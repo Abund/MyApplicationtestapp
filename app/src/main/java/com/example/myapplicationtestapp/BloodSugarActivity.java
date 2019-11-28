@@ -50,11 +50,6 @@ public class BloodSugarActivity extends Fragment {
     private Button suggestionBS;
     View view;
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_blood_sugar);
-
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater , ViewGroup container, Bundle savedInstanceState) {
@@ -93,8 +88,6 @@ public class BloodSugarActivity extends Fragment {
                 Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
             FloatingActionButton fab = view.findViewById(R.id.floatingActionButton1);
         fab.setOnClickListener(new View.OnClickListener() {
