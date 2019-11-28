@@ -134,6 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/redName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Red Wine"/>
@@ -144,6 +145,7 @@
             android:text="+"/>
 
         <TextView
+            android:id="@+id/redShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -171,6 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/spiritName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Spirit"/>
@@ -181,6 +184,7 @@
             android:text="+"/>
 
         <TextView
+            android:id="@+id/spiritShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -209,6 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/whiteName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="White Wine"/>
@@ -219,6 +224,7 @@
             android:text="+"/>
 
         <TextView
+            android:id="@+id/whiteShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -252,6 +258,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/upName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="7up"/>
@@ -290,6 +297,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/upBigName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="7up"/>
@@ -327,6 +335,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/appleJuiceName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Apple Juice"/>
@@ -365,6 +374,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/grapeJuiceName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Grape Juice"/>
@@ -410,6 +420,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/appleName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Apple"/>
@@ -448,6 +459,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/avacadoName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Avacado"/>
@@ -486,6 +498,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/bananaName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Banana"/>
@@ -524,6 +537,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/cherryName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Cherry"/>
@@ -562,6 +576,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/coconutName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Coconut"/>
@@ -607,6 +622,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/broName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Broccoli"/>
@@ -645,6 +661,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/cabbageName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Cabbage"/>
@@ -683,6 +700,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/carrotName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Carrot"/>
@@ -721,6 +739,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/cassavaName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Cassava"/>
@@ -759,6 +778,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/gardenName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Garden egg"/>
@@ -804,6 +824,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/beansWhiteName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Beans White"/>
@@ -842,6 +863,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/beansBrownName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Brown Beans"/>
@@ -880,6 +902,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/oatmealName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Oat meal"/>
@@ -918,6 +941,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/riceWhiteName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Rice white"/>
@@ -956,6 +980,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/soyaBeansName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Soya beans"/>
@@ -1001,6 +1026,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/almondName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Almonds"/>
@@ -1039,6 +1065,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/cashewName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Cashew"/>
@@ -1077,6 +1104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/walnutName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Walnut"/>
@@ -1115,6 +1143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/groundnutName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Groundnut"/>
@@ -1153,6 +1182,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/cocoName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Coconut"/>
@@ -1198,6 +1228,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/butterName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Butter"/>
@@ -1236,6 +1267,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/KetchupName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Ketchup"/>
@@ -1274,6 +1306,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/MargirineName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Margirine"/>
@@ -1312,6 +1345,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/MayonaiseName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Mayonaise"/>
@@ -1350,6 +1384,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/PeanutName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Peanut butter"/>
@@ -1395,6 +1430,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/honeyName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Honey"/>
@@ -1433,6 +1469,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/RaisinName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Raisin"/>
@@ -1471,6 +1508,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/SugarName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Sugar"/>
@@ -1509,6 +1547,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/GranulatedName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Sugar Granulated"/>
@@ -1556,6 +1595,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/CupcakeName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Cupcake(Icing)"/>
@@ -1594,6 +1634,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/GalaName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Gala"/>
@@ -1632,6 +1673,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/ConeName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="IceCream Cone"/>
@@ -1670,6 +1712,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/VanillaName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="IceCream(Vanilla)"/>
@@ -1708,6 +1751,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="28dp"/>
         <TextView
+            android:id="@+id/SamosaName"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:text="Samosa"/>

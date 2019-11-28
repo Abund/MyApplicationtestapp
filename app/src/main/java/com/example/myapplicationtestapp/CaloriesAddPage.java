@@ -232,7 +232,6 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         setContentView(R.layout.activity_calories_add_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         submit =(Button) findViewById(R.id.calSubmit);
         time= (TextView) findViewById(R.id.timeCA);
         date= (TextView) findViewById(R.id.dateCA);
@@ -247,267 +246,267 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
         beerName=(TextView) findViewById(R.id.beerName);
         ///redwine
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        redWineShow =(TextView) findViewById(R.id.redShow);
+        incrementorForRedWine =(Button) findViewById(R.id.redInc);
+        decrementorForRedWine =(Button) findViewById(R.id.redDec);
+        checkBoxForRedWine =(CheckBox) findViewById(R.id.RedWineCheck);
+        redWineName=(TextView) findViewById(R.id.redName);
         ///spirit
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        spiritShow =(TextView) findViewById(R.id.spiritShow);
+        incrementorForSpirit =(Button) findViewById(R.id.spiritInc);
+        decrementorForSpirit =(Button) findViewById(R.id.spiritDec);
+        checkBoxForSpirit =(CheckBox) findViewById(R.id.spiritID);
+        spiritName=(TextView) findViewById(R.id.spiritName);
         ///whitewine
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        whitewineShow =(TextView) findViewById(R.id.whiteShow);
+        incrementorForWhiteWine =(Button) findViewById(R.id.whiteInc);
+        decrementorForWhiteWine =(Button) findViewById(R.id.whiteDec);
+        checkBoxForWhiteWine =(CheckBox) findViewById(R.id.whiteID);
+        whitewineName=(TextView) findViewById(R.id.whiteName);
 
         //Drinks and Juice
         ///7up50
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        up50beerShow =(TextView) findViewById(R.id.idShow);
+        incrementorFor7up50 =(Button) findViewById(R.id.idInc);
+        decrementorFor7up50 =(Button) findViewById(R.id.idDec);
+        checkBoxFor7up50 =(CheckBox) findViewById(R.id.upID);
+        up50Name=(TextView) findViewById(R.id.upName);
         ///7up35
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        up35Show =(TextView) findViewById(R.id.upBigShow);
+        incrementorFor7up35 =(Button) findViewById(R.id.upBigInc);
+        decrementorFor7up35 =(Button) findViewById(R.id.upBigDec);
+        checkBoxFor7up35 =(CheckBox) findViewById(R.id.upBigId);
+        up35Name=(TextView) findViewById(R.id.upBigName);
         ///Apple Juice
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        appleJuiceShow =(TextView) findViewById(R.id.appleJuiceShow);
+        incrementorForAppleJuice =(Button) findViewById(R.id.appleJuiceInc);
+        decrementorForAppleJuice =(Button) findViewById(R.id.appleJuiceDec);
+        checkBoxForAppleJuice =(CheckBox) findViewById(R.id.appleJuice);
+        appleJuiceName=(TextView) findViewById(R.id.appleJuiceName);
         ///Grape Juice
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        grapeJuiceShow =(TextView) findViewById(R.id.grapeJuiceShow);
+        incrementorForGrapeJuice =(Button) findViewById(R.id.grapeJuiceInc);
+        decrementorForGrapeJuice =(Button) findViewById(R.id.grapeJuiceDec);
+        checkBoxForGrapeJuice =(CheckBox) findViewById(R.id.grapeJuice);
+        grapeJuiceName=(TextView) findViewById(R.id.grapeJuiceName);
 
         //fruits
         ///apple
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        appleShow =(TextView) findViewById(R.id.appleShow);
+        incrementorForApple =(Button) findViewById(R.id.appleInc);
+        decrementorForApple =(Button) findViewById(R.id.appleDec);
+        checkBoxForApple =(CheckBox) findViewById(R.id.appleId);
+        appleName=(TextView) findViewById(R.id.appleName);
         ///avacardo
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        avacardoShow =(TextView) findViewById(R.id.avacadoShow);
+        incrementorForAvacardo =(Button) findViewById(R.id.avacadoInc);
+        decrementorForAvacardo =(Button) findViewById(R.id.avacadoDec);
+        checkBoxForAvacardo =(CheckBox) findViewById(R.id.avacadoId);
+        avacardoName=(TextView) findViewById(R.id.avacadoName);
         ///banana
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        bananaShow =(TextView) findViewById(R.id.bananaShow);
+        incrementorForBanana =(Button) findViewById(R.id.bananaInc);
+        decrementorForBanana =(Button) findViewById(R.id.bananaDec);
+        checkBoxForBanana =(CheckBox) findViewById(R.id.bananaId);
+        bananaName=(TextView) findViewById(R.id.bananaName);
         ///cherry
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        cherryShow =(TextView) findViewById(R.id.cherryShow);
+        incrementorForCherry =(Button) findViewById(R.id.cherryInc);
+        decrementorForCherry =(Button) findViewById(R.id.cherryDec);
+        checkBoxForCherry =(CheckBox) findViewById(R.id.cherryId);
+        cherryName=(TextView) findViewById(R.id.cherryName);
         ///coconut
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        coconutShow =(TextView) findViewById(R.id.coconutShow);
+        incrementorForCoconut =(Button) findViewById(R.id.coconutInc);
+        decrementorForCoconut =(Button) findViewById(R.id.coconutDec);
+        checkBoxForCoconut =(CheckBox) findViewById(R.id.coconutId);
+        coconutName=(TextView) findViewById(R.id.coconutName);
 
         //vegetables
         ///broccoli
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        broccoliShow =(TextView) findViewById(R.id.brocShow);
+        incrementorForBroccoli =(Button) findViewById(R.id.broInc);
+        decrementorForBroccoli =(Button) findViewById(R.id.brocDec);
+        checkBoxForBroccoli =(CheckBox) findViewById(R.id.broId);
+        broccoliName=(TextView) findViewById(R.id.broName);
         ///cabbage
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        cabbageShow =(TextView) findViewById(R.id.cabbageShow);
+        incrementorForCabbage =(Button) findViewById(R.id.cabbageInc);
+        decrementorForCabbage =(Button) findViewById(R.id.cabbageDec);
+        checkBoxForCabbage =(CheckBox) findViewById(R.id.cabbageId);
+        cabbageName=(TextView) findViewById(R.id.cabbageName);
         ///carrot
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        carrotShow =(TextView) findViewById(R.id.carrotShow);
+        incrementorForCarrot =(Button) findViewById(R.id.carrotInc);
+        decrementorForCarrot =(Button) findViewById(R.id.carrotDec);
+        checkBoxForCarrot =(CheckBox) findViewById(R.id.carrotId);
+        carrotName=(TextView) findViewById(R.id.carrotName);
         ///cassava
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        cassavaShow =(TextView) findViewById(R.id.cassavaShow);
+        incrementorForCassava =(Button) findViewById(R.id.cassavaInc);
+        decrementorForCassava =(Button) findViewById(R.id.cassavaDec);
+        checkBoxForCassava =(CheckBox) findViewById(R.id.cassavaId);
+        cassavaName=(TextView) findViewById(R.id.cassavaName);
         ///garden egg
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        gardenEggShow =(TextView) findViewById(R.id.gardenShow);
+        incrementorForGardenEgg =(Button) findViewById(R.id.gardenInc);
+        decrementorForGardenEgg =(Button) findViewById(R.id.gardenDec);
+        checkBoxForGardenEgg =(CheckBox) findViewById(R.id.gardenId);
+        gardenEggName=(TextView) findViewById(R.id.gardenName);
 
         //Grains and legumes
         ///whiteBeans
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        whiteBeansShow =(TextView) findViewById(R.id.beanswhiteShow);
+        incrementorForWhiteBeans =(Button) findViewById(R.id.beanswhiteInc);
+        decrementorForWhiteBeans =(Button) findViewById(R.id.beanswhiteDec);
+        checkBoxForWhiteBeans =(CheckBox) findViewById(R.id.beanswhiteId);
+        whiteBeansName=(TextView) findViewById(R.id.beansWhiteName);
         ///brown beans
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        brownBeansShow =(TextView) findViewById(R.id.beansBrownShow);
+        incrementorForBrownBeans =(Button) findViewById(R.id.beansBrownInc);
+        decrementorForBrownBeans =(Button) findViewById(R.id.beansBrownDec);
+        checkBoxForBrownBeans =(CheckBox) findViewById(R.id.beansBrownId);
+        brownBeansName=(TextView) findViewById(R.id.beansBrownName);
         ///Oat meal
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        oatMealShow =(TextView) findViewById(R.id.oatmealShow);
+        incrementorForOatMeal =(Button) findViewById(R.id.oatmealInc);
+        decrementorForOatMeal =(Button) findViewById(R.id.oatmealDec);
+        checkBoxForOatMeal =(CheckBox) findViewById(R.id.oatmealId);
+        oatMealName=(TextView) findViewById(R.id.oatmealName);
         ///rice white
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        riceWhiteShow =(TextView) findViewById(R.id.riceWhiteShow);
+        incrementorForWhiteRice =(Button) findViewById(R.id.riceWhiteInc);
+        decrementorForWhiteRice =(Button) findViewById(R.id.riceWhiteDec);
+        checkBoxForWhiteRice =(CheckBox) findViewById(R.id.riceWhiteId);
+        riceWhiteName=(TextView) findViewById(R.id.riceWhiteName);
         ///soya beans
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        soyaBeansShow =(TextView) findViewById(R.id.soyaBeansIdShow);
+        incrementorForSoyaBeans =(Button) findViewById(R.id.soyaBeansInc);
+        decrementorForSoyaBeans =(Button) findViewById(R.id.soyaBeansIdDec);
+        checkBoxForSoyaBeans =(CheckBox) findViewById(R.id.soyaBeansId);
+        soyaBeansName=(TextView) findViewById(R.id.soyaBeansName);
 
         //Nuts
         ///Almonds
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        almondsShow =(TextView) findViewById(R.id.almondShow);
+        incrementorForAlmonds =(Button) findViewById(R.id.almondInc);
+        decrementorForAlmonds =(Button) findViewById(R.id.almondDec);
+        checkBoxForAlmonds =(CheckBox) findViewById(R.id.almondId);
+        almondsName=(TextView) findViewById(R.id.almondName);
         ///cashew
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        cashewShow =(TextView) findViewById(R.id.cashewShow);
+        incrementorForCashew =(Button) findViewById(R.id.cashewInc);
+        decrementorForCashew =(Button) findViewById(R.id.cashewDec);
+        checkBoxForCashew =(CheckBox) findViewById(R.id.cashewId);
+        cashewName=(TextView) findViewById(R.id.cashewName);
         ///walnut
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        walnutShow =(TextView) findViewById(R.id.walnutShow);
+        incrementorForWalnut =(Button) findViewById(R.id.walnutInc);
+        decrementorForWalnut =(Button) findViewById(R.id.walnutDec);
+        checkBoxForWalnut =(CheckBox) findViewById(R.id.walnutId);
+        walnutName=(TextView) findViewById(R.id.walnutName);
         ///groundnut
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        groundnutShow =(TextView) findViewById(R.id.groundnutShow);
+        incrementorForGroundNut =(Button) findViewById(R.id.groundnutInc);
+        decrementorForGroundNut =(Button) findViewById(R.id.groundnutDec);
+        checkBoxForGroundNut =(CheckBox) findViewById(R.id.groundnutId);
+        groundnutName=(TextView) findViewById(R.id.groundnutName);
         ///coco
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        cocoShow =(TextView) findViewById(R.id.cocoShow);
+        incrementorForCoco =(Button) findViewById(R.id.cocoInc);
+        decrementorForCoco =(Button) findViewById(R.id.cocoDec);
+        checkBoxForCoco =(CheckBox) findViewById(R.id.coco1);
+        cocoName=(TextView) findViewById(R.id.cocoName);
 
         //spreads
         ///butter
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        butterShow =(TextView) findViewById(R.id.butterShow);
+        incrementorForButter =(Button) findViewById(R.id.butterInc);
+        decrementorForButter =(Button) findViewById(R.id.butterDec);
+        checkBoxForButter =(CheckBox) findViewById(R.id.butterId);
+        butterName=(TextView) findViewById(R.id.butterName);
         ///ketchup
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        ketchupShow =(TextView) findViewById(R.id.KetchupShow);
+        incrementorForKetchup =(Button) findViewById(R.id.KetchupInc);
+        decrementorForKetchup =(Button) findViewById(R.id.KetchupDec);
+        checkBoxForKetchup =(CheckBox) findViewById(R.id.KetchupId);
+        ketchupName=(TextView) findViewById(R.id.KetchupName);
         ///Margirine
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        margirineShow =(TextView) findViewById(R.id.MargirineShow);
+        incrementorForMargirine =(Button) findViewById(R.id.MargirineInc);
+        decrementorForMargirine =(Button) findViewById(R.id.MargirineDec);
+        checkBoxForMargirine =(CheckBox) findViewById(R.id.MargirineId);
+        margirineName=(TextView) findViewById(R.id.MargirineName);
         ///Mayoniase
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        mayoniaseShow =(TextView) findViewById(R.id.MayonaiseShow);
+        incrementorForMayoniase =(Button) findViewById(R.id.MayonaiseInc);
+        decrementorForMayoniase =(Button) findViewById(R.id.MayonaiseDec);
+        checkBoxForMayoniase =(CheckBox) findViewById(R.id.MayonaiseId);
+        mayoniaseName=(TextView) findViewById(R.id.MayonaiseName);
         ///peanut
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        PeanutShow =(TextView) findViewById(R.id.PeanutShow);
+        incrementorForPeanut =(Button) findViewById(R.id.PeanutInc);
+        decrementorForPeanut =(Button) findViewById(R.id.PeanutDec);
+        checkBoxForPeanut =(CheckBox) findViewById(R.id.PeanutId);
+        PeanutName=(TextView) findViewById(R.id.PeanutName);
 
         //sweeterners
         ///honey
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        honeyShow =(TextView) findViewById(R.id.honeyShow);
+        incrementorForHoney =(Button) findViewById(R.id.honeyInc);
+        decrementorForHoney =(Button) findViewById(R.id.honeyDec);
+        checkBoxForHoney =(CheckBox) findViewById(R.id.honeyId);
+        honeyName=(TextView) findViewById(R.id.honeyName);
         ///raisin
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        raisinShow =(TextView) findViewById(R.id.RaisinShow);
+        incrementorForRaisin =(Button) findViewById(R.id.RaisinInc);
+        decrementorForRaisin =(Button) findViewById(R.id.RaisinDec);
+        checkBoxForRaisin =(CheckBox) findViewById(R.id.RaisinId);
+        raisinName=(TextView) findViewById(R.id.RaisinName);
         ///sugar
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        sugarShow =(TextView) findViewById(R.id.SugarShow);
+        incrementorForSugar =(Button) findViewById(R.id.SugarInc);
+        decrementorForSugar =(Button) findViewById(R.id.SugarDec);
+        checkBoxForSugar =(CheckBox) findViewById(R.id.SugarId);
+        sugarName=(TextView) findViewById(R.id.SugarName);
         ///sugarGranulated
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        sugarGranulatedShow =(TextView) findViewById(R.id.GranulatedShow);
+        incrementorForSugarGranulated =(Button) findViewById(R.id.GranulatedInc);
+        decrementorForSugarGranulated =(Button) findViewById(R.id.GranulatedDec);
+        checkBoxForSugarGranulated =(CheckBox) findViewById(R.id.GranulatedId);
+        sugarGranulatedName=(TextView) findViewById(R.id.GranulatedName);
 
         //snacks
         ///cupCake
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        cupCakeShow =(TextView) findViewById(R.id.CupcakeShow);
+        incrementorForcupCake =(Button) findViewById(R.id.CupcakeInc);
+        decrementorForcupCake =(Button) findViewById(R.id.CupcakeDec);
+        checkBoxForcupCake =(CheckBox) findViewById(R.id.CupcakeId);
+        cupCakeName=(TextView) findViewById(R.id.CupcakeName);
         ///gala
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        GalaShow =(TextView) findViewById(R.id.GalaShow);
+        incrementorForGala =(Button) findViewById(R.id.GalaInc);
+        decrementorForGala =(Button) findViewById(R.id.GalaDec);
+        checkBoxForGala =(CheckBox) findViewById(R.id.GalaId);
+        GalaName=(TextView) findViewById(R.id.GalaName);
         ///iceCream
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        iceCreamShow =(TextView) findViewById(R.id.ConeShow);
+        incrementorForIceCream =(Button) findViewById(R.id.ConeInc);
+        decrementorForIceCream1 =(Button) findViewById(R.id.ConeDec);
+        checkBoxForIceCream1 =(CheckBox) findViewById(R.id.ConeId);
+        iceCreamName=(TextView) findViewById(R.id.ConeName);
         ///iceCream
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        iceCream2Show =(TextView) findViewById(R.id.VanillaShow);
+        incrementorForiceCream2 =(Button) findViewById(R.id.VanillaInc);
+        decrementorForiceCream2 =(Button) findViewById(R.id.VanillaDec);
+        checkBoxForiceCream2 =(CheckBox) findViewById(R.id.VanillaId);
+        iceCream2Name=(TextView) findViewById(R.id.VanillaName);
         ///samosa
-        beerShow =(TextView) findViewById(R.id.beerShow);
-        incrementorForBeer =(Button) findViewById(R.id.beerInc);
-        decrementorForBeer =(Button) findViewById(R.id.beerDec);
-        checkBoxForBeer =(CheckBox) findViewById(R.id.beerID);
-        beerName=(TextView) findViewById(R.id.beerName);
+        samosaShow =(TextView) findViewById(R.id.SamosaShow);
+        incrementorForSamosa =(Button) findViewById(R.id.SamosaInc);
+        decrementorForSamosa =(Button) findViewById(R.id.SamosaDec);
+        checkBoxForSamosa =(CheckBox) findViewById(R.id.SamosaId);
+        samosaName=(TextView) findViewById(R.id.SamosaName);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Calorie").child(FirebaseAuth.getInstance().getUid()).push();
