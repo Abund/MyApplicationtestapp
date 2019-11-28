@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -34,10 +36,11 @@ import java.util.Calendar;
 public class CaloriesAddPage extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener{
 
     private Button submit;
-    private TextView date,time,foodName,foodType;
+    private TextView date,time,foodName;
     private DatabaseReference myRef;
     StringBuilder comp1= new StringBuilder();
     int calorieAmount;
+    private AutoCompleteTextView foodType;
     int i=0;
 
     //Alcoholic Beverages
@@ -226,17 +229,28 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
     private Button incrementorForSamosa,decrementorForSamosa;
     private TextView samosaShow,samosaName;
 
+    private static final String[] meas=new String[]{"Breakfast","Lunch","Brunch","Dinner"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calories_add_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        ArrayAdapter<String> com=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,meas);
+
         submit =(Button) findViewById(R.id.calSubmit);
         time= (TextView) findViewById(R.id.timeCA);
         date= (TextView) findViewById(R.id.dateCA);
         foodName= (TextView) findViewById(R.id.foodName);
-        foodType= (TextView) findViewById(R.id.foodType);
+        foodType= (AutoCompleteTextView) findViewById(R.id.foodType);
+        foodType.setAdapter(com);
+        foodType.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                foodType.showDropDown();
+            }
+        });
 
         //Alcoholic Beverages
         ///beer
