@@ -9,14 +9,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.CalorieAdapter;
 import com.example.myapplicationtestapp.model.Calorie;
+import com.example.myapplicationtestapp.popups.CaloriePopUp;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.LimitLine;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -42,6 +47,7 @@ public class CaloriesActivity extends Fragment {
     private ArrayList<String> mData;
     private DatabaseReference myRef;
     private CalorieAdapter calorieAdapter;
+    private Button suggestion;
     View view;
 
 //    @Override
@@ -56,6 +62,7 @@ public class CaloriesActivity extends Fragment {
         super.onCreate(savedInstanceState);
         lineChart =(LineChart) view.findViewById(R.id.lineChart3);
         mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewCA);
+        suggestion = (Button) view.findViewById(R.id.suggestionCAS);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);
 
@@ -74,6 +81,7 @@ public class CaloriesActivity extends Fragment {
                     Calorie calorie = dataSnapshot1.getValue(Calorie.class);
                     data.add(calorie);
                 }
+                lineChart=sendata(lineChart,data);
                 calorieAdapter = new CalorieAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(calorieAdapter);
             }
@@ -84,26 +92,6 @@ public class CaloriesActivity extends Fragment {
             }
         });
 
-        lineChart.setDragEnabled(true);
-        lineChart.setScaleEnabled(true);
-
-        ArrayList<Entry> yValues = new ArrayList<>();
-
-        yValues.add(new Entry(0,50));
-        yValues.add(new Entry(1,60));
-        yValues.add(new Entry(2,70));
-        yValues.add(new Entry(3,80));
-        yValues.add(new Entry(4,90));
-        yValues.add(new Entry(5,100));
-
-        LineDataSet set1 = new LineDataSet(yValues,"Data set 1");
-        set1.setFillAlpha(110);
-
-        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-        dataSets.add(set1);
-
-        LineData data = new LineData(dataSets);
-        lineChart.setData(data);
 
         FloatingActionButton fab = view.findViewById(R.id.floatingActionButton2);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -113,13 +101,90 @@ public class CaloriesActivity extends Fragment {
                 startActivity(at);
             }
         });
+
+        suggestion.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getActivity().getBaseContext(), CaloriePopUp.class));
+            }
+        });
         return view;
+    }
+
+    private LineChart sendata(LineChart lineChart,ArrayList<Calorie> data) {
+        lineChart.setDragEnabled(true);
+        lineChart.setScaleEnabled(true);
+
+        LimitLine upperLimit = new LimitLine(130f,"DANGER");
+        upperLimit.setLineWidth(4f);
+        upperLimit.enableDashedLine(10f,10f,0);
+        upperLimit.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_TOP);
+        upperLimit.setTextSize(15f);
+
+        LimitLine lowerLimit = new LimitLine(112f,"Too Low");
+        upperLimit.setLineWidth(4f);
+        upperLimit.enableDashedLine(10f,10f,0);
+        upperLimit.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_BOTTOM);
+        upperLimit.setTextSize(15f);
+
+        YAxis leftAxis = lineChart.getAxisLeft();
+        leftAxis.removeAllLimitLines();
+        leftAxis.addLimitLine(upperLimit);
+        leftAxis.addLimitLine(lowerLimit);
+        //leftAxis.setAxisMaximum(100f);
+        //leftAxis.setAxisMinimum(25f);
+        leftAxis.enableGridDashedLine(10f,10f,0);
+        leftAxis.setDrawLimitLinesBehindData(true);
+        lineChart.getAxisRight().setEnabled(false);
+        lineChart.setDragEnabled(true);
+        lineChart.setScaleEnabled(true);
+
+//        final String[] months = new String[]{"Feb", "Feb", "Mar", "Apr", "Mar", "Apr"};
+
+        //final String[] months = new String[data.size()];
+//        for(int i =0;i<data.size();i++){
+//            months[i]=data.get(i).getDate();
+//            //yValues.add(new Entry(i, data.get(i).getDiastolicPressure()));
+//        }
+
+//        ValueFormatter formatter = new ValueFormatter() {
+//            @Override
+//            public String getAxisLabel(float value, AxisBase axis) {
+//                return months[(int) value];
+//            }
+//        };
+//        XAxis xAxis = lineChart.getXAxis();
+//        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+//        xAxis.setGranularity(1f);
+//        xAxis.setValueFormatter(formatter);
+
+        ArrayList<Entry> yValues = new ArrayList<>();
+
+        data.get(0).getCalorieUnits();
+        Log.e("eeeeeeeeeeeeeeeeee",""+data.get(0).getCalorieUnits());
+
+        for(int i =0;i<data.size();i++){
+            float f1 = (float)data.get(i).getCalorieUnits();
+            yValues.add(new Entry(i, f1));
+            Log.e("eeeeeeeeeeeeeeeeee",""+data.get(i).getCalorieUnits());
+        }
+
+        LineDataSet set1 = new LineDataSet(yValues,"Data set 1");
+        set1.setFillAlpha(110);
+
+        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(set1);
+
+        LineData data1 = new LineData(dataSets);
+        lineChart.setData(data1);
+        return lineChart;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("HealthCare");
     }

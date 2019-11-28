@@ -3,7 +3,7 @@ package com.example.myapplicationtestapp.model;
 public class Calorie {
     private String time;
     private String foodType;
-    private String calorieUnits;
+    private int calorieUnits;
     private String date;
     private String foodName;
     private String foodContent;
@@ -40,11 +40,11 @@ public class Calorie {
         this.foodType = timeType;
     }
 
-    public String getCalorieUnits() {
+    public int getCalorieUnits() {
         return calorieUnits;
     }
 
-    public void setCalorieUnits(String calorieUnits) {
+    public void setCalorieUnits(int calorieUnits) {
         this.calorieUnits = calorieUnits;
     }
 

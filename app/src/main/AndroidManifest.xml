@@ -35,6 +35,10 @@
         <activity android:name=".popups.BloodPressurePopUp"
             android:theme="@style/AppTheme.CustomTheme">
         </activity>
+
+        <activity android:name=".popups.CaloriePopUp"
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
         <activity android:name=".MedicationAddPage"
             android:parentActivityName=".MedicationDashBoard"
             />
