@@ -42,6 +42,47 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
     int calorieAmount;
     private AutoCompleteTextView foodType;
     int i=0;
+    int numRedWine=0;
+    int numSpirit=0;
+    int numWhiteWine=0;
+    int num7up50=0;
+    int num7up35=0;
+    int numAppleJuice=0;
+    int numGrapeWine=0;
+    int numApple=0;
+    int numAvacardo=0;
+    int numBanana=0;
+    int numCherry=0;
+    int numCoconut=0;
+    int numBroccoli=0;
+    int numCabbage=0;
+    int numCarrot=0;
+    int numCassava=0;
+    int numGardenEgg=0;
+    int numWhiteBeans=0;
+    int numBrownBeans=0;
+    int numOatMeal=0;
+    int numRiceWhite=0;
+    int numSoyaBeans=0;
+    int numAlmonds=0;
+    int numCashew=0;
+    int numWalnut=0;
+    int numGroundnut=0;
+    int numCoco=0;
+    int numButter=0;
+    int numKetchup=0;
+    int numMargirine=0;
+    int numMayoniase=0;
+    int numPeanut=0;
+    int numHoney=0;
+    int numRaisin=0;
+    int numSugar=0;
+    int numsugarGranulated=0;
+    int numCupCake=0;
+    int numGala=0;
+    int numIceCream=0;
+    int numIceCream2=0;
+    int numSamosa=0;
 
     //Alcoholic Beverages
     ///beer
@@ -561,10 +602,11 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             }
         });
         ///redwine
+
         incrementorForRedWine.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numRedWine++;
                 redWineShow.setText(""+i);
             }
         });
@@ -572,7 +614,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numRedWine--;
                 }else {
                 }
                 redWineShow.setText(""+i);
@@ -582,7 +624,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForSpirit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numSpirit++;
                 spiritShow.setText(""+i);
             }
         });
@@ -590,7 +632,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numSpirit--;
                 }else {
                 }
                 spiritShow.setText(""+i);
@@ -600,7 +642,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForWhiteWine.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numWhiteWine++;
                 whitewineShow.setText(""+i);
             }
         });
@@ -608,7 +650,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numWhiteWine--;
                 }else {
                 }
                 whitewineShow.setText(""+i);
@@ -620,7 +662,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorFor7up50.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                num7up50++;
                 up50beerShow.setText(""+i);
             }
         });
@@ -628,7 +670,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    num7up50--;
                 }else {
                 }
                 up50beerShow.setText(""+i);
@@ -638,7 +680,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorFor7up35.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                num7up35++;
                 up35Show.setText(""+i);
             }
         });
@@ -646,7 +688,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    num7up35--;
                 }else {
                 }
                 up35Show.setText(""+i);
@@ -656,7 +698,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForAppleJuice.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numAppleJuice++;
                 appleJuiceShow.setText(""+i);
             }
         });
@@ -664,7 +706,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numAppleJuice--;
                 }else {
                 }
                 appleJuiceShow.setText(""+i);
@@ -674,7 +716,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForGrapeJuice.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numGrapeWine++;
                 grapeJuiceShow.setText(""+i);
             }
         });
@@ -682,7 +724,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numGrapeWine--;
                 }else {
                 }
                 grapeJuiceShow.setText(""+i);
@@ -695,7 +737,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForApple.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numApple++;
                 appleShow.setText(""+i);
             }
         });
@@ -704,7 +746,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numApple--;
                 }else {
                 }
                 appleShow.setText(""+i);
@@ -714,7 +756,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForAvacardo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numAvacardo++;
                 avacardoShow.setText(""+i);
             }
         });
@@ -722,7 +764,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numAvacardo--;
                 }else {
                 }
                 avacardoShow.setText(""+i);
@@ -732,7 +774,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForBanana.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numBanana++;
                 bananaShow.setText(""+i);
             }
         });
@@ -740,7 +782,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numBanana--;
                 }else {
                 }
                 bananaShow.setText(""+i);
@@ -750,7 +792,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCherry.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCherry++;
                 cherryShow.setText(""+i);
             }
         });
@@ -758,7 +800,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCherry--;
                 }else {
                 }
                 cherryShow.setText(""+i);
@@ -768,7 +810,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCoconut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCoconut++;
                 coconutShow.setText(""+i);
             }
         });
@@ -776,7 +818,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCoconut--;
                 }else {
                 }
                 coconutShow.setText(""+i);
@@ -789,7 +831,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForBroccoli.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numBroccoli++;
                 broccoliShow.setText(""+i);
             }
         });
@@ -798,7 +840,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numBroccoli--;
                 }else {
                 }
                 broccoliShow.setText(""+i);
@@ -808,7 +850,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCabbage.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCabbage++;
                 cabbageShow.setText(""+i);
             }
         });
@@ -816,7 +858,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCabbage--;
                 }else {
                 }
                 cabbageShow.setText(""+i);
@@ -826,7 +868,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCarrot.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCarrot++;
                 carrotShow.setText(""+i);
             }
         });
@@ -834,7 +876,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCarrot--;
                 }else {
                 }
                 carrotShow.setText(""+i);
@@ -844,7 +886,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCassava.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCassava++;
                 cassavaShow.setText(""+i);
             }
         });
@@ -852,7 +894,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCassava--;
                 }else {
                 }
                 cassavaShow.setText(""+i);
@@ -862,7 +904,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForGardenEgg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numGardenEgg++;
                 gardenEggShow.setText(""+i);
             }
         });
@@ -870,7 +912,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numGardenEgg--;
                 }else {
                 }
                 gardenEggShow.setText(""+i);
@@ -883,7 +925,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForWhiteBeans.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numWhiteBeans++;
                 whiteBeansShow.setText(""+i);
             }
         });
@@ -891,7 +933,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numWhiteBeans--;
                 }else {
                 }
                 whiteBeansShow.setText(""+i);
@@ -901,7 +943,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForBrownBeans.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numBrownBeans++;
                 brownBeansShow.setText(""+i);
             }
         });
@@ -909,7 +951,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numBrownBeans--;
                 }else {
                 }
                 brownBeansShow.setText(""+i);
@@ -919,7 +961,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForOatMeal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numOatMeal++;
                 oatMealShow.setText(""+i);
             }
         });
@@ -927,7 +969,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numOatMeal--;
                 }else {
                 }
                 oatMealShow.setText(""+i);
@@ -937,7 +979,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForWhiteRice.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numRiceWhite++;
                 riceWhiteShow.setText(""+i);
             }
         });
@@ -945,7 +987,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numRiceWhite--;
                 }else {
                 }
                 riceWhiteShow.setText(""+i);
@@ -955,7 +997,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForSoyaBeans.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numSoyaBeans++;
                 soyaBeansShow.setText(""+i);
             }
         });
@@ -963,7 +1005,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numSoyaBeans--;
                 }else {
                 }
                 soyaBeansShow.setText(""+i);
@@ -976,7 +1018,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForAlmonds.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numAlmonds++;
                 almondsShow.setText(""+i);
             }
         });
@@ -985,7 +1027,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numAlmonds--;
                 }else {
                 }
                 almondsShow.setText(""+i);
@@ -995,7 +1037,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCashew.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCashew++;
                 cashewShow.setText(""+i);
             }
         });
@@ -1003,7 +1045,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCashew--;
                 }else {
                 }
                 cashewShow.setText(""+i);
@@ -1013,7 +1055,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForWalnut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numWalnut++;
                 walnutShow.setText(""+i);
             }
         });
@@ -1021,7 +1063,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numWalnut--;
                 }else {
                 }
                 walnutShow.setText(""+i);
@@ -1031,7 +1073,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForGroundNut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numGroundnut++;
                 groundnutShow.setText(""+i);
             }
         });
@@ -1039,7 +1081,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numGroundnut--;
                 }else {
                 }
                 groundnutShow.setText(""+i);
@@ -1049,7 +1091,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForCoco.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCoco++;
                 cocoShow.setText(""+i);
             }
         });
@@ -1057,7 +1099,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numCoco--;
                 }else {
                 }
                 cocoShow.setText(""+i);
@@ -1069,7 +1111,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForButter.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numButter++;
                 butterShow.setText(""+i);
             }
         });
@@ -1077,7 +1119,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numButter--;
                 }else {
                 }
                 butterShow.setText(""+i);
@@ -1087,7 +1129,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForKetchup.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numKetchup++;
                 ketchupShow.setText(""+i);
             }
         });
@@ -1095,7 +1137,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numKetchup--;
                 }else {
                 }
                 ketchupShow.setText(""+i);
@@ -1105,7 +1147,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForMargirine.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numMargirine++;
                 margirineShow.setText(""+i);
             }
         });
@@ -1113,7 +1155,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numMargirine--;
                 }else {
                 }
                 margirineShow.setText(""+i);
@@ -1123,7 +1165,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForMayoniase.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numMayoniase++;
                 mayoniaseShow.setText(""+i);
             }
         });
@@ -1131,7 +1173,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numMayoniase--;
                 }else {
                 }
                 mayoniaseShow.setText(""+i);
@@ -1141,7 +1183,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForPeanut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numPeanut++;
                 PeanutShow.setText(""+i);
             }
         });
@@ -1149,7 +1191,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numPeanut--;
                 }else {
                 }
                 PeanutShow.setText(""+i);
@@ -1162,7 +1204,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForHoney.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numHoney++;
                 honeyShow.setText(""+i);
             }
         });
@@ -1170,7 +1212,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numHoney--;
                 }else {
                 }
                 honeyShow.setText(""+i);
@@ -1180,7 +1222,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForRaisin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numRaisin++;
                 raisinShow.setText(""+i);
             }
         });
@@ -1188,7 +1230,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numRaisin--;
                 }else {
                 }
                 raisinShow.setText(""+i);
@@ -1198,7 +1240,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForSugar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numSugar++;
                 sugarShow.setText(""+i);
             }
         });
@@ -1206,7 +1248,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numSugar--;
                 }else {
                 }
                 sugarShow.setText(""+i);
@@ -1216,7 +1258,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForSugarGranulated.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numsugarGranulated++;
                 sugarGranulatedShow.setText(""+i);
             }
         });
@@ -1224,7 +1266,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numsugarGranulated--;
                 }else {
                 }
                 sugarGranulatedShow.setText(""+i);
@@ -1237,7 +1279,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForcupCake.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numCupCake++;
                 cupCakeShow.setText(""+i);
             }
         });
@@ -1255,7 +1297,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForGala.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numGala++;
                 GalaShow.setText(""+i);
             }
         });
@@ -1263,7 +1305,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numGala--;
                 }else {
                 }
                 GalaShow.setText(""+i);
@@ -1273,7 +1315,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForIceCream.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numIceCream++;
                 iceCreamShow.setText(""+i);
             }
         });
@@ -1281,7 +1323,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numIceCream--;
                 }else {
                 }
                 iceCreamShow.setText(""+i);
@@ -1291,7 +1333,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForiceCream2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numIceCream2++;
                 iceCream2Show.setText(""+i);
             }
         });
@@ -1299,7 +1341,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numIceCream2--;
                 }else {
                 }
                 iceCream2Show.setText(""+i);
@@ -1309,7 +1351,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
         incrementorForSamosa.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                i++;
+                numSamosa++;
                 samosaShow.setText(""+i);
             }
         });
@@ -1317,7 +1359,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 if(i>0){
-                    i--;
+                    numSamosa--;
                 }else {
                 }
                 samosaShow.setText(""+i);
