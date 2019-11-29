@@ -607,7 +607,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numRedWine++;
-                redWineShow.setText(""+i);
+                redWineShow.setText(""+numRedWine);
             }
         });
         decrementorForRedWine.setOnClickListener(new View.OnClickListener(){
@@ -617,7 +617,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numRedWine--;
                 }else {
                 }
-                redWineShow.setText(""+i);
+                redWineShow.setText(""+numRedWine);
             }
         });
         ///spirit
@@ -625,7 +625,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numSpirit++;
-                spiritShow.setText(""+i);
+                spiritShow.setText(""+numSpirit);
             }
         });
         decrementorForSpirit.setOnClickListener(new View.OnClickListener(){
@@ -635,7 +635,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numSpirit--;
                 }else {
                 }
-                spiritShow.setText(""+i);
+                spiritShow.setText(""+numSpirit);
             }
         });
         ///whitewine
@@ -643,7 +643,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numWhiteWine++;
-                whitewineShow.setText(""+i);
+                whitewineShow.setText(""+numWhiteWine);
             }
         });
         decrementorForWhiteWine.setOnClickListener(new View.OnClickListener(){
@@ -653,7 +653,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numWhiteWine--;
                 }else {
                 }
-                whitewineShow.setText(""+i);
+                whitewineShow.setText(""+numWhiteWine);
             }
         });
 
@@ -663,7 +663,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 num7up50++;
-                up50beerShow.setText(""+i);
+                up50beerShow.setText(""+num7up50);
             }
         });
         decrementorFor7up50.setOnClickListener(new View.OnClickListener(){
@@ -673,7 +673,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     num7up50--;
                 }else {
                 }
-                up50beerShow.setText(""+i);
+                up50beerShow.setText(""+num7up50);
             }
         });
         ///7up35
@@ -681,7 +681,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 num7up35++;
-                up35Show.setText(""+i);
+                up35Show.setText(""+num7up35);
             }
         });
         decrementorFor7up35.setOnClickListener(new View.OnClickListener(){
@@ -691,7 +691,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     num7up35--;
                 }else {
                 }
-                up35Show.setText(""+i);
+                up35Show.setText(""+num7up35);
             }
         });
         ///Apple Juice
@@ -699,7 +699,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numAppleJuice++;
-                appleJuiceShow.setText(""+i);
+                appleJuiceShow.setText(""+numAppleJuice);
             }
         });
         decrementorForAppleJuice.setOnClickListener(new View.OnClickListener(){
@@ -709,7 +709,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numAppleJuice--;
                 }else {
                 }
-                appleJuiceShow.setText(""+i);
+                appleJuiceShow.setText(""+numAppleJuice);
             }
         });
         ///Grape Juice
@@ -717,7 +717,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numGrapeWine++;
-                grapeJuiceShow.setText(""+i);
+                grapeJuiceShow.setText(""+numGrapeWine);
             }
         });
         decrementorForGrapeJuice.setOnClickListener(new View.OnClickListener(){
@@ -727,7 +727,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numGrapeWine--;
                 }else {
                 }
-                grapeJuiceShow.setText(""+i);
+                grapeJuiceShow.setText(""+numGrapeWine);
             }
         });
 
@@ -738,7 +738,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numApple++;
-                appleShow.setText(""+i);
+                appleShow.setText(""+numApple);
             }
         });
 
@@ -749,7 +749,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numApple--;
                 }else {
                 }
-                appleShow.setText(""+i);
+                appleShow.setText(""+numApple);
             }
         });
         ///avacardo
@@ -757,7 +757,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numAvacardo++;
-                avacardoShow.setText(""+i);
+                avacardoShow.setText(""+numAvacardo);
             }
         });
         decrementorForAvacardo.setOnClickListener(new View.OnClickListener(){
@@ -767,7 +767,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numAvacardo--;
                 }else {
                 }
-                avacardoShow.setText(""+i);
+                avacardoShow.setText(""+numAvacardo);
             }
         });
         ///banana
@@ -775,7 +775,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numBanana++;
-                bananaShow.setText(""+i);
+                bananaShow.setText(""+numBanana);
             }
         });
         decrementorForBanana.setOnClickListener(new View.OnClickListener(){
@@ -785,7 +785,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numBanana--;
                 }else {
                 }
-                bananaShow.setText(""+i);
+                bananaShow.setText(""+numBanana);
             }
         });
         ///cherry
@@ -793,7 +793,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCherry++;
-                cherryShow.setText(""+i);
+                cherryShow.setText(""+numCherry);
             }
         });
         decrementorForCherry.setOnClickListener(new View.OnClickListener(){
@@ -803,7 +803,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCherry--;
                 }else {
                 }
-                cherryShow.setText(""+i);
+                cherryShow.setText(""+numCherry);
             }
         });
         ///coconut
@@ -811,7 +811,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCoconut++;
-                coconutShow.setText(""+i);
+                coconutShow.setText(""+numCoconut);
             }
         });
         decrementorForCoconut.setOnClickListener(new View.OnClickListener(){
@@ -821,7 +821,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCoconut--;
                 }else {
                 }
-                coconutShow.setText(""+i);
+                coconutShow.setText(""+numCoconut);
             }
         });
 
@@ -832,7 +832,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numBroccoli++;
-                broccoliShow.setText(""+i);
+                broccoliShow.setText(""+numBroccoli);
             }
         });
 
@@ -843,7 +843,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numBroccoli--;
                 }else {
                 }
-                broccoliShow.setText(""+i);
+                broccoliShow.setText(""+numBroccoli);
             }
         });
         ///cabbage
@@ -851,7 +851,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCabbage++;
-                cabbageShow.setText(""+i);
+                cabbageShow.setText(""+numCabbage);
             }
         });
         decrementorForCabbage.setOnClickListener(new View.OnClickListener(){
@@ -861,7 +861,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCabbage--;
                 }else {
                 }
-                cabbageShow.setText(""+i);
+                cabbageShow.setText(""+numCabbage);
             }
         });
         ///carrot
@@ -869,7 +869,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCarrot++;
-                carrotShow.setText(""+i);
+                carrotShow.setText(""+numCarrot);
             }
         });
         decrementorForCarrot.setOnClickListener(new View.OnClickListener(){
@@ -879,7 +879,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCarrot--;
                 }else {
                 }
-                carrotShow.setText(""+i);
+                carrotShow.setText(""+numCarrot);
             }
         });
         ///cassava
@@ -887,7 +887,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCassava++;
-                cassavaShow.setText(""+i);
+                cassavaShow.setText(""+numCassava);
             }
         });
         decrementorForCassava.setOnClickListener(new View.OnClickListener(){
@@ -897,7 +897,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCassava--;
                 }else {
                 }
-                cassavaShow.setText(""+i);
+                cassavaShow.setText(""+numCassava);
             }
         });
         ///garden egg
@@ -905,7 +905,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numGardenEgg++;
-                gardenEggShow.setText(""+i);
+                gardenEggShow.setText(""+numGardenEgg);
             }
         });
         decrementorForGardenEgg.setOnClickListener(new View.OnClickListener(){
@@ -915,7 +915,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numGardenEgg--;
                 }else {
                 }
-                gardenEggShow.setText(""+i);
+                gardenEggShow.setText(""+numGardenEgg);
             }
         });
 
@@ -926,7 +926,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numWhiteBeans++;
-                whiteBeansShow.setText(""+i);
+                whiteBeansShow.setText(""+numWhiteBeans);
             }
         });
         decrementorForWhiteBeans.setOnClickListener(new View.OnClickListener(){
@@ -936,7 +936,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numWhiteBeans--;
                 }else {
                 }
-                whiteBeansShow.setText(""+i);
+                whiteBeansShow.setText(""+numWhiteBeans);
             }
         });
         ///brown beans
@@ -944,7 +944,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numBrownBeans++;
-                brownBeansShow.setText(""+i);
+                brownBeansShow.setText(""+numBrownBeans);
             }
         });
         decrementorForBrownBeans.setOnClickListener(new View.OnClickListener(){
@@ -954,7 +954,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numBrownBeans--;
                 }else {
                 }
-                brownBeansShow.setText(""+i);
+                brownBeansShow.setText(""+numBrownBeans);
             }
         });
         ///Oat meal
@@ -962,7 +962,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numOatMeal++;
-                oatMealShow.setText(""+i);
+                oatMealShow.setText(""+numOatMeal);
             }
         });
         decrementorForOatMeal.setOnClickListener(new View.OnClickListener(){
@@ -972,7 +972,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numOatMeal--;
                 }else {
                 }
-                oatMealShow.setText(""+i);
+                oatMealShow.setText(""+numOatMeal);
             }
         });
         ///rice white
@@ -980,7 +980,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numRiceWhite++;
-                riceWhiteShow.setText(""+i);
+                riceWhiteShow.setText(""+numRiceWhite);
             }
         });
         decrementorForWhiteRice.setOnClickListener(new View.OnClickListener(){
@@ -990,7 +990,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numRiceWhite--;
                 }else {
                 }
-                riceWhiteShow.setText(""+i);
+                riceWhiteShow.setText(""+numRiceWhite);
             }
         });
         ///soya beans
@@ -998,7 +998,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numSoyaBeans++;
-                soyaBeansShow.setText(""+i);
+                soyaBeansShow.setText(""+numSoyaBeans);
             }
         });
         decrementorForSoyaBeans.setOnClickListener(new View.OnClickListener(){
@@ -1008,7 +1008,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numSoyaBeans--;
                 }else {
                 }
-                soyaBeansShow.setText(""+i);
+                soyaBeansShow.setText(""+numSoyaBeans);
             }
         });
 
@@ -1019,7 +1019,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numAlmonds++;
-                almondsShow.setText(""+i);
+                almondsShow.setText(""+numAlmonds);
             }
         });
 
@@ -1030,7 +1030,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numAlmonds--;
                 }else {
                 }
-                almondsShow.setText(""+i);
+                almondsShow.setText(""+numAlmonds);
             }
         });
         ///cashew
@@ -1038,7 +1038,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCashew++;
-                cashewShow.setText(""+i);
+                cashewShow.setText(""+numCashew);
             }
         });
         decrementorForCashew.setOnClickListener(new View.OnClickListener(){
@@ -1048,7 +1048,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCashew--;
                 }else {
                 }
-                cashewShow.setText(""+i);
+                cashewShow.setText(""+numCashew);
             }
         });
         ///walnut
@@ -1056,7 +1056,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numWalnut++;
-                walnutShow.setText(""+i);
+                walnutShow.setText(""+numWalnut);
             }
         });
         decrementorForWalnut.setOnClickListener(new View.OnClickListener(){
@@ -1066,7 +1066,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numWalnut--;
                 }else {
                 }
-                walnutShow.setText(""+i);
+                walnutShow.setText(""+numWalnut);
             }
         });
         ///groundnut
@@ -1074,7 +1074,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numGroundnut++;
-                groundnutShow.setText(""+i);
+                groundnutShow.setText(""+numGroundnut);
             }
         });
         decrementorForGroundNut.setOnClickListener(new View.OnClickListener(){
@@ -1084,7 +1084,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numGroundnut--;
                 }else {
                 }
-                groundnutShow.setText(""+i);
+                groundnutShow.setText(""+numGroundnut);
             }
         });
         ///coco
@@ -1092,7 +1092,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCoco++;
-                cocoShow.setText(""+i);
+                cocoShow.setText(""+numCoco);
             }
         });
         decrementorForCoco.setOnClickListener(new View.OnClickListener(){
@@ -1102,7 +1102,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numCoco--;
                 }else {
                 }
-                cocoShow.setText(""+i);
+                cocoShow.setText(""+numCoco);
             }
         });
 
@@ -1112,7 +1112,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numButter++;
-                butterShow.setText(""+i);
+                butterShow.setText(""+numButter);
             }
         });
         decrementorForButter.setOnClickListener(new View.OnClickListener(){
@@ -1122,7 +1122,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numButter--;
                 }else {
                 }
-                butterShow.setText(""+i);
+                butterShow.setText(""+numButter);
             }
         });
         ///ketchup
@@ -1130,7 +1130,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numKetchup++;
-                ketchupShow.setText(""+i);
+                ketchupShow.setText(""+numKetchup);
             }
         });
         decrementorForKetchup.setOnClickListener(new View.OnClickListener(){
@@ -1140,7 +1140,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numKetchup--;
                 }else {
                 }
-                ketchupShow.setText(""+i);
+                ketchupShow.setText(""+numKetchup);
             }
         });
         ///Margirine
@@ -1148,7 +1148,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numMargirine++;
-                margirineShow.setText(""+i);
+                margirineShow.setText(""+numMargirine);
             }
         });
         decrementorForMargirine.setOnClickListener(new View.OnClickListener(){
@@ -1158,7 +1158,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numMargirine--;
                 }else {
                 }
-                margirineShow.setText(""+i);
+                margirineShow.setText(""+numMargirine);
             }
         });
         ///Mayoniase
@@ -1166,7 +1166,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numMayoniase++;
-                mayoniaseShow.setText(""+i);
+                mayoniaseShow.setText(""+numMayoniase);
             }
         });
         decrementorForMayoniase.setOnClickListener(new View.OnClickListener(){
@@ -1176,7 +1176,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numMayoniase--;
                 }else {
                 }
-                mayoniaseShow.setText(""+i);
+                mayoniaseShow.setText(""+numMayoniase);
             }
         });
         ///peanut
@@ -1184,7 +1184,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numPeanut++;
-                PeanutShow.setText(""+i);
+                PeanutShow.setText(""+numPeanut);
             }
         });
         decrementorForPeanut.setOnClickListener(new View.OnClickListener(){
@@ -1194,7 +1194,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numPeanut--;
                 }else {
                 }
-                PeanutShow.setText(""+i);
+                PeanutShow.setText(""+numPeanut);
             }
         });
 
@@ -1205,7 +1205,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numHoney++;
-                honeyShow.setText(""+i);
+                honeyShow.setText(""+numHoney);
             }
         });
         decrementorForHoney.setOnClickListener(new View.OnClickListener(){
@@ -1215,7 +1215,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numHoney--;
                 }else {
                 }
-                honeyShow.setText(""+i);
+                honeyShow.setText(""+numHoney);
             }
         });
         ///raisin
@@ -1223,7 +1223,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numRaisin++;
-                raisinShow.setText(""+i);
+                raisinShow.setText(""+numRaisin);
             }
         });
         decrementorForRaisin.setOnClickListener(new View.OnClickListener(){
@@ -1233,7 +1233,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numRaisin--;
                 }else {
                 }
-                raisinShow.setText(""+i);
+                raisinShow.setText(""+numRaisin);
             }
         });
         ///sugar
@@ -1241,7 +1241,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numSugar++;
-                sugarShow.setText(""+i);
+                sugarShow.setText(""+numSugar);
             }
         });
         decrementorForSugar.setOnClickListener(new View.OnClickListener(){
@@ -1251,7 +1251,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numSugar--;
                 }else {
                 }
-                sugarShow.setText(""+i);
+                sugarShow.setText(""+numSugar);
             }
         });
         ///sugarGranulated
@@ -1259,7 +1259,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numsugarGranulated++;
-                sugarGranulatedShow.setText(""+i);
+                sugarGranulatedShow.setText(""+numsugarGranulated);
             }
         });
         decrementorForSugarGranulated.setOnClickListener(new View.OnClickListener(){
@@ -1269,7 +1269,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numsugarGranulated--;
                 }else {
                 }
-                sugarGranulatedShow.setText(""+i);
+                sugarGranulatedShow.setText(""+numsugarGranulated);
             }
         });
 
@@ -1280,7 +1280,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numCupCake++;
-                cupCakeShow.setText(""+i);
+                cupCakeShow.setText(""+numCupCake);
             }
         });
         decrementorForcupCake.setOnClickListener(new View.OnClickListener(){
@@ -1290,7 +1290,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     i--;
                 }else {
                 }
-                cupCakeShow.setText(""+i);
+                cupCakeShow.setText(""+numCupCake);
             }
         });
         ///gala
@@ -1298,7 +1298,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numGala++;
-                GalaShow.setText(""+i);
+                GalaShow.setText(""+numGala);
             }
         });
         decrementorForGala.setOnClickListener(new View.OnClickListener(){
@@ -1308,7 +1308,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numGala--;
                 }else {
                 }
-                GalaShow.setText(""+i);
+                GalaShow.setText(""+numGala);
             }
         });
         ///iceCream
@@ -1316,7 +1316,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numIceCream++;
-                iceCreamShow.setText(""+i);
+                iceCreamShow.setText(""+numIceCream);
             }
         });
         decrementorForIceCream1.setOnClickListener(new View.OnClickListener(){
@@ -1326,7 +1326,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numIceCream--;
                 }else {
                 }
-                iceCreamShow.setText(""+i);
+                iceCreamShow.setText(""+numIceCream);
             }
         });
         ///iceCream
@@ -1334,7 +1334,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numIceCream2++;
-                iceCream2Show.setText(""+i);
+                iceCream2Show.setText(""+numIceCream2);
             }
         });
         decrementorForiceCream2.setOnClickListener(new View.OnClickListener(){
@@ -1344,7 +1344,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numIceCream2--;
                 }else {
                 }
-                iceCream2Show.setText(""+i);
+                iceCream2Show.setText(""+numIceCream2);
             }
         });
         ///samosa
@@ -1352,7 +1352,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v){
                 numSamosa++;
-                samosaShow.setText(""+i);
+                samosaShow.setText(""+numSamosa);
             }
         });
         decrementorForSamosa.setOnClickListener(new View.OnClickListener(){
@@ -1362,7 +1362,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                     numSamosa--;
                 }else {
                 }
-                samosaShow.setText(""+i);
+                samosaShow.setText(""+numSamosa);
             }
         });
 

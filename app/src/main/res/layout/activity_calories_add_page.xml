@@ -147,6 +147,7 @@
 
         <TextView
             android:id="@+id/redShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -186,6 +187,7 @@
 
         <TextView
             android:id="@+id/spiritShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -226,6 +228,7 @@
 
         <TextView
             android:id="@+id/whiteShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -272,6 +275,7 @@
         <TextView
             android:id="@+id/idShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -312,6 +316,7 @@
             android:id="@+id/upBigShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -349,6 +354,7 @@
         <TextView
             android:id="@+id/appleJuiceShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -388,6 +394,7 @@
         <TextView
             android:id="@+id/grapeJuiceShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -435,6 +442,7 @@
             android:id="@+id/appleShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -474,6 +482,7 @@
             android:id="@+id/avacadoShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -512,6 +521,7 @@
         <TextView
             android:id="@+id/bananaShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -552,6 +562,7 @@
             android:id="@+id/cherryShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -590,6 +601,7 @@
         <TextView
             android:id="@+id/coconutShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -635,6 +647,7 @@
 
         <TextView
             android:id="@+id/brocShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -676,6 +689,7 @@
             android:id="@+id/cabbageShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -714,6 +728,7 @@
         <TextView
             android:id="@+id/carrotShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -753,6 +768,7 @@
         <TextView
             android:id="@+id/cassavaShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -793,6 +809,7 @@
             android:id="@+id/gardenShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -839,6 +856,7 @@
             android:id="@+id/beanswhiteShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -878,6 +896,7 @@
             android:id="@+id/beansBrownShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -915,6 +934,7 @@
 
         <TextView
             android:id="@+id/oatmealShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -954,6 +974,7 @@
 
         <TextView
             android:id="@+id/riceWhiteShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -993,6 +1014,7 @@
 
         <TextView
             android:id="@+id/soyaBeansIdShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -1039,6 +1061,7 @@
 
         <TextView
             android:id="@+id/almondShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -1079,6 +1102,7 @@
         <TextView
             android:id="@+id/cashewShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1117,6 +1141,7 @@
 
         <TextView
             android:id="@+id/walnutShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -1155,6 +1180,7 @@
             android:text="+"/>
 
         <TextView
+            android:text="0"
             android:id="@+id/groundnutShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -1196,6 +1222,7 @@
         <TextView
             android:id="@+id/cocoShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1242,6 +1269,7 @@
         <TextView
             android:id="@+id/butterShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1282,6 +1310,7 @@
             android:id="@+id/KetchupShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -1320,6 +1349,7 @@
         <TextView
             android:id="@+id/MargirineShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1358,6 +1388,7 @@
 
         <TextView
             android:id="@+id/MayonaiseShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -1396,6 +1427,7 @@
             android:text="+"/>
 
         <TextView
+            android:text="0"
             android:id="@+id/PeanutShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -1444,6 +1476,7 @@
         <TextView
             android:id="@+id/honeyShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1484,6 +1517,7 @@
             android:id="@+id/RaisinShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -1521,6 +1555,7 @@
 
         <TextView
             android:id="@+id/SugarShow"
+            android:text="0"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
@@ -1561,6 +1596,7 @@
         <TextView
             android:id="@+id/GranulatedShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1610,6 +1646,7 @@
             android:id="@+id/CupcakeShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -1649,6 +1686,7 @@
             android:id="@+id/GalaShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -1687,6 +1725,7 @@
         <TextView
             android:id="@+id/ConeShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
@@ -1727,6 +1766,7 @@
             android:id="@+id/VanillaShow"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:text="0"
             android:background="@drawable/back"/>
 
         <Button
@@ -1765,6 +1805,7 @@
         <TextView
             android:id="@+id/SamosaShow"
             android:layout_width="35dp"
+            android:text="0"
             android:layout_height="35dp"
             android:background="@drawable/back"/>
 
