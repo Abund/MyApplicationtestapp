@@ -64,7 +64,7 @@
         app:srcCompat="@drawable/ic_person_black_24dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageViewBloodPressure"
         android:layout_width="95dp"
         android:layout_height="83dp"
         android:layout_marginStart="32dp"
@@ -75,7 +75,7 @@
         app:srcCompat="@drawable/bloodpressureicon" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imageViewBloodSugar"
         android:layout_width="95dp"
         android:layout_height="87dp"
         android:layout_marginStart="36dp"
@@ -83,14 +83,14 @@
         android:layout_marginTop="212dp"
         android:layout_marginEnd="37dp"
         android:layout_marginRight="37dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCalories"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBloodPressure"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bloodsugar" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imageViewCalories"
         android:layout_width="93dp"
         android:layout_height="86dp"
         android:layout_marginTop="132dp"
@@ -109,7 +109,7 @@
         android:layout_marginTop="28dp"
         android:text="Blood Pressure"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBloodPressure" />
 
     <TextView
         android:id="@+id/bloodSugarT"
@@ -120,7 +120,7 @@
         android:layout_marginTop="28dp"
         android:text="Blood Sugar"
         app:layout_constraintStart_toEndOf="@+id/bloodPressureT"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBloodSugar" />
 
     <TextView
         android:id="@+id/calories"
@@ -131,7 +131,7 @@
         android:layout_marginRight="40dp"
         android:text="Calories"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCalories" />
 
     <Button
         android:id="@+id/medibutton"

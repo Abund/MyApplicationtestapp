@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.BloodSugarAdapter;
@@ -48,6 +49,7 @@ public class BloodSugarActivity extends Fragment {
     private DatabaseReference myRef;
     private BloodSugarAdapter bloodSugarAdapter;
     private Button suggestionBS;
+    private TextView alternate;
     View view;
 
         @Nullable
@@ -57,6 +59,7 @@ public class BloodSugarActivity extends Fragment {
             super.onCreate(savedInstanceState);
 
         lineChart =(LineChart) view.findViewById(R.id.lineChart2);
+        alternate =(TextView) view.findViewById(R.id.alternate);
         suggestionBS =(Button) view.findViewById(R.id.suggestionBS);
         mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewBSA);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
@@ -81,6 +84,10 @@ public class BloodSugarActivity extends Fragment {
                 lineChart=sendata(lineChart,data);
                 bloodSugarAdapter = new BloodSugarAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(bloodSugarAdapter);
+                if(data.isEmpty()){
+                    alternate.setVisibility(View.VISIBLE);
+                    alternate.setText("Please add your data");
+                }
             }
 
             @Override
@@ -88,6 +95,8 @@ public class BloodSugarActivity extends Fragment {
                 Toast.makeText(getActivity().getBaseContext(),"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
             FloatingActionButton fab = view.findViewById(R.id.floatingActionButton1);
         fab.setOnClickListener(new View.OnClickListener() {

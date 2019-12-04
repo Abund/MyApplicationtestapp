@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplicationtestapp.adapters.CalorieAdapter;
@@ -48,6 +49,7 @@ public class CaloriesActivity extends Fragment {
     private DatabaseReference myRef;
     private CalorieAdapter calorieAdapter;
     private Button suggestion;
+    private TextView alternate;
     View view;
 
     @Nullable
@@ -56,6 +58,7 @@ public class CaloriesActivity extends Fragment {
         view= inflater.inflate(R.layout.activity_calories,container,false);
         super.onCreate(savedInstanceState);
         lineChart =(LineChart) view.findViewById(R.id.lineChart3);
+        alternate =(TextView) view.findViewById(R.id.alternateCA);
         mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewCA);
         suggestion = (Button) view.findViewById(R.id.suggestionCAS);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
@@ -79,6 +82,10 @@ public class CaloriesActivity extends Fragment {
                 lineChart=sendata(lineChart,data);
                 calorieAdapter = new CalorieAdapter(data,getActivity().getBaseContext());
                 mRecycler.setAdapter(calorieAdapter);
+                if(data.isEmpty()){
+                    alternate.setVisibility(View.VISIBLE);
+                    alternate.setText("Please enter your readings");
+                }
             }
 
             @Override

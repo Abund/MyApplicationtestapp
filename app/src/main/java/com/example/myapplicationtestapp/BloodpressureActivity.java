@@ -66,7 +66,7 @@ public class BloodpressureActivity extends Fragment {
         //setContentView(R.layout.activity_bloodpressure);
         lineChart = (LineChart) view.findViewById(R.id.lineChart);
         mRecycler = (RecyclerView) view.findViewById(R.id.recyclerViewBP);
-        alternate = (TextView) view.findViewById(R.id.alternate);
+        alternate = (TextView) view.findViewById(R.id.alternateBP);
         suggestionBP =(Button) view.findViewById(R.id.suggestionBP);
         //lineChart.setOnChartGestureListener(BloodpressureActivity.this);
         //lineChart.setOnChartValueSelectedListener(BloodpressureActivity.this);

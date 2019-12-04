@@ -77,5 +77,19 @@
         app:layout_constraintTop_toBottomOf="@+id/suggestionBP"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_menu_add" />
+    <TextView
+        android:id="@+id/alternateBP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="208dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewBP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

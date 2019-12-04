@@ -31,6 +31,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class HomeScreen extends AppCompatActivity
 
     TextView bloodp,bloods,cal,goal,clientName;
     Button medi;
+    private ImageView imageViewCalories,imageViewBloodPressure,imageViewBloodSugar;
     FirebaseAuth firebaseAuth;
     FirebaseUser userf;
     DatabaseReference myRef;
@@ -68,6 +70,9 @@ public class HomeScreen extends AppCompatActivity
 
         bloodp = (TextView) findViewById(R.id.bloodPressureT);
         bloods = (TextView) findViewById(R.id.bloodSugarT);
+        imageViewCalories = (ImageView) findViewById(R.id.imageViewCalories);
+        imageViewBloodPressure = (ImageView) findViewById(R.id.imageViewBloodPressure);
+        imageViewBloodSugar = (ImageView) findViewById(R.id.imageViewBloodSugar);
         cal = (TextView) findViewById(R.id.calories);
         goal = (TextView) findViewById(R.id.goals);
         medi=(Button) findViewById(R.id.medibutton);
@@ -98,6 +103,26 @@ public class HomeScreen extends AppCompatActivity
         });
 
         bloods.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new BloodSugarActivity()).commit();
+            }
+        });
+
+
+        imageViewCalories.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new CaloriesActivity()).commit();
+            }
+        });
+        imageViewBloodPressure.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new BloodpressureActivity()).commit();
+            }
+        });
+        imageViewBloodSugar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 getSupportFragmentManager().beginTransaction().add(R.id.content_frame,new BloodSugarActivity()).commit();
