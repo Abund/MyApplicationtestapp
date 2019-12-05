@@ -57,7 +57,7 @@ public class HomeScreen extends AppCompatActivity
 
     private TextView bloodp,bloods,cal,goal,clientName,profileName;
     Button medi;
-    private ImageView imageViewCalories,imageViewBloodPressure,imageViewBloodSugar,imageViewProfile;
+    private ImageView imageViewCalories,imageViewBloodPressure,imageViewBloodSugar,imageViewProfile,imageViewHomePageProfile;
     FirebaseAuth firebaseAuth;
     FirebaseUser userf;
     DatabaseReference myRef;
@@ -91,13 +91,13 @@ public class HomeScreen extends AppCompatActivity
         imageViewCalories = (ImageView) findViewById(R.id.imageViewCalories);
         imageViewBloodPressure = (ImageView) findViewById(R.id.imageViewBloodPressure);
         imageViewBloodSugar = (ImageView) findViewById(R.id.imageViewBloodSugar);
+        imageViewHomePageProfile = (ImageView) findViewById(R.id.imageViewHomePageProfile);
         cal = (TextView) findViewById(R.id.calories);
         goal = (TextView) findViewById(R.id.goals);
         medi=(Button) findViewById(R.id.medibutton);
         clientName = (TextView) findViewById(R.id.clientName);
         firebaseAuth =FirebaseAuth.getInstance();
         userf=firebaseAuth.getCurrentUser();
-        profileName.setText("lala");
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user!=null){
@@ -105,6 +105,9 @@ public class HomeScreen extends AppCompatActivity
                 Glide.with(this)
                         .load(user.getPhotoUrl())
                         .into(imageViewProfile);
+                Glide.with(this)
+                        .load(user.getPhotoUrl())
+                        .into(imageViewHomePageProfile);
             }
         }
 
