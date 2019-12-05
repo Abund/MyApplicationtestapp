@@ -1,26 +1,39 @@
 package com.example.myapplicationtestapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 
+import com.bumptech.glide.Glide;
 import com.example.myapplicationtestapp.model.User;
 
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
 import com.facebook.login.LoginManager;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,18 +48,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView bloodp,bloods,cal,goal,clientName;
+    private TextView bloodp,bloods,cal,goal,clientName,profileName;
     Button medi;
-    private ImageView imageViewCalories,imageViewBloodPressure,imageViewBloodSugar;
+    private ImageView imageViewCalories,imageViewBloodPressure,imageViewBloodSugar,imageViewProfile;
     FirebaseAuth firebaseAuth;
     FirebaseUser userf;
     DatabaseReference myRef;
+    private int TAKE_IMAGE_CODE=10001;
+    private  static final String TAG="HomeScreenActivity";
 
 
     @Override
@@ -62,6 +78,8 @@ public class HomeScreen extends AppCompatActivity
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        profileName = navigationView.getHeaderView(0).findViewById(R.id.profileName);
+        imageViewProfile = navigationView.getHeaderView(0).findViewById(R.id.imageViewProfile);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -79,6 +97,16 @@ public class HomeScreen extends AppCompatActivity
         clientName = (TextView) findViewById(R.id.clientName);
         firebaseAuth =FirebaseAuth.getInstance();
         userf=firebaseAuth.getCurrentUser();
+        profileName.setText("lala");
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user!=null){
+            if(user.getPhotoUrl()!=null){
+                Glide.with(this)
+                        .load(user.getPhotoUrl())
+                        .into(imageViewProfile);
+            }
+        }
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -87,11 +115,22 @@ public class HomeScreen extends AppCompatActivity
                 User user= new User();
                 user=dataSnapshot.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getValue(User.class);
                 clientName.setText(user.getFirstName());
+                profileName.setText(user.getFirstName()+" "+user.getLastName());
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(HomeScreen.this,"Oppss... something went wrong",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        imageViewProfile.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if(intent.resolveActivity(getPackageManager())!=null){
+                    startActivityForResult(intent,TAKE_IMAGE_CODE);
+                }
             }
         });
 
@@ -160,6 +199,72 @@ public class HomeScreen extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode==TAKE_IMAGE_CODE){
+            switch (resultCode){
+                case RESULT_OK:
+                    Bitmap bitmap =(Bitmap) data.getExtras().get("data");
+                    imageViewProfile.setImageBitmap(bitmap);
+                    handleUpload(bitmap);
+            }
+        }
+    }
+
+    private void handleUpload(Bitmap bitmap){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,baos);
+
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        final StorageReference reference = FirebaseStorage.getInstance().getReference()
+                .child("profileImages")
+                .child(uid+".jpeg");
+        reference.putBytes(baos.toByteArray())
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        getDownloadUrl(reference);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG,"onFailure",e.getCause());
+                    }
+                });
+    }
+
+    private void getDownloadUrl(StorageReference reference){
+        reference.getDownloadUrl()
+                .addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Log.e(TAG,"onSuccess:"+uri);
+                        setUserProfile(uri);
+                    }
+                });
+    }
+
+    private void setUserProfile(Uri uri){
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        UserProfileChangeRequest request = new UserProfileChangeRequest.Builder()
+                .setPhotoUri(uri).build();
+        user.updateProfile(request)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(HomeScreen.this,"Updated successfully",Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(HomeScreen.this,"profile image failed",Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     @Override
