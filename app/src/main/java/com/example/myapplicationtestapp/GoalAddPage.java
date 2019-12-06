@@ -52,6 +52,7 @@ public class GoalAddPage extends AppCompatActivity implements DatePickerDialog.O
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("goal");
+        myRef.keepSynced(true);
 
         date.setOnClickListener(new View.OnClickListener(){
             @Override

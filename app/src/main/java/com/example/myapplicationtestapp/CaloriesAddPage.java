@@ -1827,7 +1827,7 @@ public class CaloriesAddPage extends AppCompatActivity implements DatePickerDial
                 calorie.setFoodType(foodType.getText().toString());
                 calorie.setCalorieUnits(calorieAmount);
                 calorie.setFoodContent(comp1.toString());
-
+                myRef.keepSynced(true);
                 myRef.setValue(calorie).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

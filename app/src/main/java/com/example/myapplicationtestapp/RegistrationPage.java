@@ -160,6 +160,7 @@ public class RegistrationPage extends AppCompatActivity {
                                     startActivity(at);
                                 }
                             });
+                            myRef.keepSynced(true);
 
                             Goal goal = new Goal();
                             goal.setGoal("2700");

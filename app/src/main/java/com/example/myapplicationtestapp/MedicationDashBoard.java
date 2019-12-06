@@ -53,6 +53,7 @@ public class MedicationDashBoard extends Fragment {
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("Medication").child(FirebaseAuth.getInstance().getUid());
+        myRef.keepSynced(true);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

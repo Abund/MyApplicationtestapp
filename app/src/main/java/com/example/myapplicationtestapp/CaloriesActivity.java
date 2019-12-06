@@ -68,6 +68,7 @@ public class CaloriesActivity extends Fragment {
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("Calorie").child(FirebaseAuth.getInstance().getUid());
+        myRef.keepSynced(true);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

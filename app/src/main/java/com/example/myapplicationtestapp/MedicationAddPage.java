@@ -102,6 +102,7 @@ public class MedicationAddPage extends AppCompatActivity implements DatePickerDi
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Medication").child(FirebaseAuth.getInstance().getUid()).push();
+        myRef.keepSynced(true);
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButtonMAD);
         fab.setOnClickListener(new View.OnClickListener() {

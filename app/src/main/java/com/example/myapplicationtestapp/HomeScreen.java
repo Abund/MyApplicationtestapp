@@ -74,6 +74,7 @@ public class HomeScreen extends AppCompatActivity
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference=database.getReference("users");
+        databaseReference.keepSynced(true);
         myRef = FirebaseDatabase.getInstance().getReference().child("users");
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

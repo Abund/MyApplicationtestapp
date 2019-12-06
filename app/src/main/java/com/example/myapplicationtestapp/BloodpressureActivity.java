@@ -76,6 +76,7 @@ public class BloodpressureActivity extends Fragment {
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
       //  myRef = FirebaseDatabase.getInstance().getReference().child("BloodPressure").child(FirebaseAuth.getInstance().getUid()).push();
         myRefOnline = FirebaseDatabase.getInstance().getReference().child("BloodPressure").child(FirebaseAuth.getInstance().getUid());
+        myRefOnline.keepSynced(true);
 
         myRefOnline.addValueEventListener(new ValueEventListener() {
             @Override

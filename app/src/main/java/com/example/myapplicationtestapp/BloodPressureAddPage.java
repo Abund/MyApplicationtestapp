@@ -81,6 +81,7 @@ public class BloodPressureAddPage extends AppCompatActivity implements DatePicke
         });
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("BloodPressure").child(FirebaseAuth.getInstance().getUid()).push();
+        myRef.keepSynced(true);
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButtonA);
         fab.setOnClickListener(new View.OnClickListener() {

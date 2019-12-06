@@ -85,6 +85,7 @@ public class BloodSugarAddPage extends AppCompatActivity implements DatePickerDi
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("BloodSugar").child(FirebaseAuth.getInstance().getUid()).push();
+        myRef.keepSynced(true);
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButtonSA);
         fab.setOnClickListener(new View.OnClickListener() {

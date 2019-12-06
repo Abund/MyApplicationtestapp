@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
                     password.setError("Password is required");
                     return;
                 }
-
                 else if(password1.length()<6){
                     password.setError("Password must be greater than 6 characters long");
                     return;

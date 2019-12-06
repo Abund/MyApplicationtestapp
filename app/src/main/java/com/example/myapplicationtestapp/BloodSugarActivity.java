@@ -70,6 +70,7 @@ public class BloodSugarActivity extends Fragment {
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         myRef = FirebaseDatabase.getInstance().getReference().child("BloodSugar").child(FirebaseAuth.getInstance().getUid());
+        myRef.keepSynced(true);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
